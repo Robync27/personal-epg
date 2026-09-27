@@ -1,0 +1,81 @@
+name: Update personal EPG
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: personal-epg-update
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout personal EPG
+        uses: actions/checkout@v4
+
+      - name: Checkout upstream EPG tools
+        uses: actions/checkout@v4
+        with:
+          repository: iptv-org/epg
+          ref: master
+          path: upstream
+          fetch-depth: 1
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: upstream/package-lock.json
+
+      - name: Install upstream dependencies
+        working-directory: upstream
+        run: npm ci
+
+      - name: Select channels
+        run: python3 scripts/select_channels.py config/channels.json upstream work/channels
+
+      - name: Grab US guide
+        working-directory: upstream
+        run: npm run grab --- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=7 --maxConnections=3
+
+      - name: Grab Canada guide
+        working-directory: upstream
+        run: npm run grab --- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=7 --maxConnections=3
+
+      - name: Grab UK guide
+        working-directory: upstream
+        run: npm run grab --- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=7 --maxConnections=3
+
+      - name: Merge and compress XMLTV
+        run: |
+          mkdir -p public
+          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml
+          gzip -9 -c public/epg.xml > public/epg.xml.gz
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          root=ET.parse('public/epg.xml').getroot()
+          print('channels=', len(root.findall('channel')), 'programmes=', len(root.findall('programme')))
+          assert root.tag == 'tv'
+          assert root.findall('channel')
+          assert root.findall('programme')
+          PY
+
+      - name: Publish updated guide
+        run: |
+          git config user.name 'personal-epg-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add public/epg.xml public/epg.xml.gz
+          if git diff --cached --quiet; then
+            echo 'No EPG changes to commit.'
+          else
+            git commit -m 'Update EPG data'
+            git push
+          fi

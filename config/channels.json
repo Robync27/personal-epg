@@ -1,0 +1,21 @@
+{
+  "days": 7,
+  "sources": [
+    {
+      "name": "us",
+      "upstream": "sites/ontvtonight.com/ontvtonight.com_us.channels.xml",
+      "patterns": ["HBO", "Cinemax", "Showtime", "Starz", "MGM", "Movie Channel", "Flix", "AMC", "FX", "FXX", "USA Network", "TNT", "TBS", "Bravo", "Syfy", "A&E", "Discovery", "History", "TLC", "Food Network", "HGTV", "Comedy Central", "Paramount Network", "Lifetime", "Hallmark", "BET", "MTV", "VH1", "Freeform", "E! Entertainment"]
+    },
+    {
+      "name": "ca",
+      "upstream": "sites/ontvtonight.com/ontvtonight.com_ca.channels.xml",
+      "patterns": ["CBC", "CTV", "Global", "Citytv", "City TV", "Crave", "CTV Comedy", "CTV Drama", "CTV Life", "CTV Sci-Fi", "Showcase", "W Network", "Slice", "History", "Discovery", "Food Network", "HGTV", "YTV", "Treehouse", "Family Channel", "MovieTime"]
+    },
+    {
+      "name": "uk",
+      "upstream": "sites/sky.com/sky.com.channels.xml",
+      "site_id_prefix": "GB#",
+      "patterns": ["Sky Cinema Premiere", "Sky Cinema", "Sky Showcase", "Sky Atlantic", "Sky Max", "Sky Witness", "Sky Comedy", "Sky Crime", "Sky Arts", "BBC One", "BBC Two", "ITV1", "Channel 4", "Channel 5", "E4", "Dave", "Gold", "Alibi", "W"]
+    }
+  ]
+}
