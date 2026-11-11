@@ -2,6 +2,11 @@ name: Update personal EPG
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'config/**'
+      - 'scripts/**'
+      - '.github/workflows/update-epg.yml'
   schedule:
     - cron: '17 */6 * * *'
 
@@ -44,21 +49,22 @@ jobs:
 
       - name: Grab US guide
         working-directory: upstream
-        run: npm run grab --- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=7 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=7 --maxConnections=3
 
       - name: Grab Canada guide
         working-directory: upstream
-        run: npm run grab --- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=7 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=7 --maxConnections=3
 
       - name: Grab UK guide
         working-directory: upstream
-        run: npm run grab --- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=7 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=7 --maxConnections=3
 
       - name: Merge and compress XMLTV
         run: |
           mkdir -p public
           python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml
           gzip -9 -c public/epg.xml > public/epg.xml.gz
+          cp public/epg.xml.gz Canada_EPG.xml.gz
           python3 - <<'PY'
           import xml.etree.ElementTree as ET
           root=ET.parse('public/epg.xml').getroot()
@@ -66,13 +72,25 @@ jobs:
           assert root.tag == 'tv'
           assert root.findall('channel')
           assert root.findall('programme')
+          from datetime import datetime, timezone, timedelta
+          now = datetime.now(timezone.utc)
+          def starts_in_future(p):
+            try:
+              raw = p.get('start','')
+              return datetime.strptime(raw[:14], '%Y%m%d%H%M%S') >= (now.replace(tzinfo=None) - timedelta(hours=12))
+            except ValueError:
+              return False
+          assert any(starts_in_future(p) for p in root.findall('programme')), 'No current or future listings: refusing to publish stale guide'
+          for label in ('HBO', 'Cinemax', 'MoreMAX'):
+            matches = [ch.get('id','') for ch in root.findall('channel') if label.casefold() in ' '.join(x.text or '' for x in ch.findall('display-name')).casefold()]
+            print(f'{label} channel IDs: {matches}')
           PY
 
       - name: Publish updated guide
         run: |
           git config user.name 'personal-epg-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add public/epg.xml public/epg.xml.gz
+          git add public/epg.xml public/epg.xml.gz Canada_EPG.xml.gz
           if git diff --cached --quiet; then
             echo 'No EPG changes to commit.'
           else
