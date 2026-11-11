@@ -4,7 +4,10 @@
     {
       "name": "us",
       "upstream": "sites/ontvtonight.com/ontvtonight.com_us.channels.xml",
-      "patterns": ["HBO", "Cinemax", "Showtime", "Starz", "MGM", "Movie Channel", "Flix", "AMC", "FX", "FXX", "USA Network", "TNT", "TBS", "Bravo", "Syfy", "A&E", "Discovery", "History", "TLC", "Food Network", "HGTV", "Comedy Central", "Paramount Network", "Lifetime", "Hallmark", "BET", "MTV", "VH1", "Freeform", "E! Entertainment"]
+      "patterns": ["HBO", "Cinemax", "Showtime", "Starz", "MGM", "Movie Channel", "Flix", "AMC", "FX", "FXX", "USA Network", "TNT", "TBS", "Bravo", "Syfy", "A&E", "Discovery", "History", "TLC", "Food Network", "HGTV", "Comedy Central", "Paramount Network", "Lifetime", "Hallmark", "BET", "MTV", "VH1", "Freeform", "E! Entertainment"],
+      "extra_channels": [
+        {"name": "HBO Zone East", "site": "tvpassport.com", "site_id": "hbo-zone-hd--east/7102", "lang": "en", "xmltv_id": "HBOZone.us@East"}
+      ]
     },
     {
       "name": "ca",

@@ -30,8 +30,11 @@ for source in cfg['sources']:
     outroot = ET.Element('channels')
     for ch in selected:
         outroot.append(ch)
+    for entry in source.get('extra_channels', []):
+        attributes = {key: value for key, value in entry.items() if key != 'name'}
+        ET.SubElement(outroot, 'channel', attributes).text = entry['name']
     out = outdir / f"{source['name']}.channels.xml"
     ET.ElementTree(outroot).write(out, encoding='utf-8', xml_declaration=True)
-    print(f"{source['name']}: selected {len(selected)} channels -> {out}")
-    if not selected:
+    print(f"{source['name']}: selected {len(outroot)} channels -> {out}")
+    if not len(outroot):
         raise SystemExit(f"No channels selected for {source['name']}")
