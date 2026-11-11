@@ -16,7 +16,13 @@ No IPTV username, password, Xtream credentials, VPS credentials, or private toke
 
 ## TiviMate URL
 
-After the first successful workflow run, use the raw GitHub URL for `public/epg.xml.gz` as the XMLTV EPG source in TiviMate. The channel IDs in your playlist still need to match the XMLTV channel IDs; use TiviMate's manual EPG assignment for channels that do not match automatically.
+Existing TiviMate URL (kept up to date by the workflow):
+
+`https://raw.githubusercontent.com/Robync27/personal-epg/main/Canada_EPG.xml.gz`
+
+Alternative URL: `https://raw.githubusercontent.com/Robync27/personal-epg/main/public/epg.xml.gz`
+
+The workflow checks for updated listings every six hours and also runs when its code or configuration changes. The channel IDs in your playlist must match the XMLTV channel IDs; use TiviMate's manual EPG assignment for channels that do not match automatically. A matching channel name in the configuration does not guarantee that an upstream source provides its schedule.
 
 ## Files
 
@@ -26,6 +32,7 @@ After the first successful workflow run, use the raw GitHub URL for `public/epg.
 - `.github/workflows/update-epg.yml` — automatic six-hour update
 - `public/epg.xml` — generated guide
 - `public/epg.xml.gz` — compressed generated guide
+- `Canada_EPG.xml.gz` — compatibility copy for the existing TiviMate URL
 
 ## Data and rights
 
