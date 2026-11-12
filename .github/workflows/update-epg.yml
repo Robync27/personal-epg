@@ -67,7 +67,12 @@ jobs:
         working-directory: upstream
         run: |
           if python3 -c "import xml.etree.ElementTree as ET; import sys; sys.exit(0 if len(ET.parse('../work/channels/fallback.channels.xml').getroot()) else 1)"; then
-            npm run grab -- --channels=../work/channels/fallback.channels.xml --output=../work/fallback.xml --days=7 --maxConnections=2
+            if npm run grab -- --channels=../work/channels/fallback.channels.xml --output=../work/fallback.xml --days=7 --maxConnections=2; then
+              python3 -c "import xml.etree.ElementTree as ET; assert ET.parse('../work/fallback.xml').getroot().tag == 'tv'" || rm -f ../work/fallback.xml
+            else
+              echo "Fallback grab failed; retaining primary listings only."
+              rm -f ../work/fallback.xml
+            fi
           else
             echo "No eligible fallback channels to fetch."
           fi
