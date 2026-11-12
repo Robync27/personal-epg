@@ -74,3 +74,25 @@ summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
 if summary_path:
     with open(summary_path, "a", encoding="utf-8") as stream:
         stream.write(summary)
+
+# Check requested IDs, not only channels that survived into XMLTV output.
+# Otherwise a nearly empty guide can appear healthy by omitting missing channels.
+requested = set()
+for selected_path in sorted(Path("work/channels").glob("*.channels.xml")):
+    if selected_path.name.startswith("fallback"):
+        continue
+    for channel in ET.parse(selected_path).getroot().findall("channel"):
+        cid = channel.get("xmltv_id")
+        if cid:
+            requested.add(cid)
+covered = set(remaining) & requested
+if requested:
+    rate = len(covered) / len(requested)
+    print("Selected channels with future entries: %s / %s (%.1f%%)" %
+          (len(covered), len(requested), 100 * rate))
+    if os.environ.get("GITHUB_STEP_SUMMARY"):
+        with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as stream:
+            stream.write("\n- Requested IDs with future programming: **%d/%d (%.1f%%)**\n" %
+                         (len(covered), len(requested), 100 * rate))
+    if rate < 0.60:
+        raise SystemExit("Refusing to publish: fewer than 60% of requested channels have current/future programmes")
