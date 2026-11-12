@@ -29,6 +29,7 @@ for source in cfg["sources"]:
     prefix = source.get("site_id_prefix")
     selected = []
     seen = set()
+    seen_ids = set()
     generated = 0
     for ch in root.findall("channel"):
         name = "".join(ch.itertext()).strip()
@@ -43,9 +44,10 @@ for source in cfg["sources"]:
             ch.set("xmltv_id", fallback_id(name, site_id, source["name"]))
             generated += 1
         key = (ch.get("site"), site_id)
-        if key in seen:
+        if key in seen or ch.get('xmltv_id') in seen_ids:
             continue
         seen.add(key)
+        seen_ids.add(ch.get('xmltv_id'))
         selected.append(ch)
 
     outroot = ET.Element("channels")
@@ -55,6 +57,9 @@ for source in cfg["sources"]:
         if not all(entry.get(k) for k in ("name", "site", "site_id", "xmltv_id")):
             raise SystemExit(f"Invalid extra channel in {source['name']}: {entry}")
         attributes = {key: value for key, value in entry.items() if key != "name"}
+        if entry['xmltv_id'] in seen_ids:
+            continue
+        seen_ids.add(entry['xmltv_id'])
         ET.SubElement(outroot, "channel", attributes).text = entry["name"]
 
     ids = [ch.get("xmltv_id") for ch in outroot]
