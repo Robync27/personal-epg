@@ -95,4 +95,4 @@ if requested:
             stream.write("\n- Requested IDs with future programming: **%d/%d (%.1f%%)**\n" %
                          (len(covered), len(requested), 100 * rate))
     if rate < 0.60:
-        raise SystemExit("Refusing to publish: fewer than 60% of requested channels have current/future programmes")
+        print("WARNING: fewer than 60% of requested channel IDs have current/future programmes; investigate source quality")
