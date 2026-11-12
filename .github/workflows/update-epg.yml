@@ -59,10 +59,23 @@ jobs:
         working-directory: upstream
         run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=7 --maxConnections=3
 
+      - name: Discover fallback sources for missing listings
+        run: |
+          python3 scripts/select_fallbacks.py config/channels.json upstream work/channels work/channels/fallback.channels.xml work/us.xml work/ca.xml work/uk.xml
+
+      - name: Grab missing listings from alternate sources
+        working-directory: upstream
+        run: |
+          if python3 -c "import xml.etree.ElementTree as ET; import sys; sys.exit(0 if len(ET.parse('../work/channels/fallback.channels.xml').getroot()) else 1)"; then
+            npm run grab -- --channels=../work/channels/fallback.channels.xml --output=../work/fallback.xml --days=7 --maxConnections=2
+          else
+            echo "No eligible fallback channels to fetch."
+          fi
+
       - name: Merge and compress XMLTV
         run: |
           mkdir -p public
-          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml
+          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml work/fallback.xml
           gzip -9 -c public/epg.xml > public/epg.xml.gz
           cp public/epg.xml.gz Canada_EPG.xml.gz
           python3 - <<'PY'
