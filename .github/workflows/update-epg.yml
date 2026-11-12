@@ -59,28 +59,10 @@ jobs:
         working-directory: upstream
         run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=7 --maxConnections=3
 
-      - name: Discover fallback sources for missing listings
-        run: |
-          python3 scripts/select_fallbacks.py config/channels.json upstream work/channels work/channels/fallback.channels.xml work/us.xml work/ca.xml work/uk.xml
-
-      - name: Grab missing listings from alternate sources
-        working-directory: upstream
-        run: |
-          if python3 -c "import xml.etree.ElementTree as ET; import sys; sys.exit(0 if len(ET.parse('../work/channels/fallback.channels.xml').getroot()) else 1)"; then
-            if npm run grab -- --channels=../work/channels/fallback.channels.xml --output=../work/fallback.xml --days=7 --maxConnections=2; then
-              python3 -c "import xml.etree.ElementTree as ET; assert ET.parse('../work/fallback.xml').getroot().tag == 'tv'" || rm -f ../work/fallback.xml
-            else
-              echo "Fallback grab failed; retaining primary listings only."
-              rm -f ../work/fallback.xml
-            fi
-          else
-            echo "No eligible fallback channels to fetch."
-          fi
-
       - name: Merge and compress XMLTV
         run: |
           mkdir -p public
-          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml work/fallback.xml
+          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml
           gzip -9 -c public/epg.xml > public/epg.xml.gz
           cp public/epg.xml.gz Canada_EPG.xml.gz
           python3 - <<'PY'
@@ -102,6 +84,47 @@ jobs:
           for label in ('HBO', 'Cinemax', 'MoreMAX'):
             matches = [ch.get('id','') for ch in root.findall('channel') if label.casefold() in ' '.join(x.text or '' for x in ch.findall('display-name')).casefold()]
             print(f'{label} channel IDs: {matches}')
+          PY
+
+      - name: Guard against loss of guide coverage
+        run: |
+          python3 - <<'PY'
+          import collections
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          candidate = ET.parse('public/epg.xml').getroot()
+          now = datetime.now(timezone.utc)
+          cutoff = now - timedelta(hours=6)
+          def profile(root):
+              channels = {c.get('id') for c in root.findall('channel') if c.get('id')}
+              valid = collections.Counter()
+              for p in root.findall('programme'):
+                  cid = p.get('channel')
+                  start = p.get('start', '')
+                  try:
+                      when = datetime.strptime(start[:14], '%Y%m%d%H%M%S').replace(tzinfo=timezone.utc)
+                  except ValueError:
+                      continue
+                  # Timestamps are in each listing's local offset; the guard uses
+                  # counts of total programmes independently of this freshness sample.
+                  if cid and cid in channels and when >= cutoff:
+                      valid[cid] += 1
+              return len(channels), len(root.findall('programme')), len(valid)
+          new = profile(candidate)
+          print('Candidate: channels, programmes, approximate active channels:', new)
+          if new[0] < 20 or new[1] < 500 or new[2] < 15:
+              raise SystemExit('Refusing to publish severely incomplete guide')
+          previous_path = Path('public/previous-epg.xml')
+          # Compare against the guide committed at the beginning of the job.
+          import subprocess
+          previous = subprocess.run(['git', 'show', 'HEAD:public/epg.xml'], capture_output=True)
+          if previous.returncode == 0 and previous.stdout:
+              old = profile(ET.fromstring(previous.stdout))
+              print('Previously published:', old)
+              if old[0] >= 20 and (new[0] < old[0]*0.65 or new[1] < old[1]*0.50 or new[2] < old[2]*0.60):
+                  raise SystemExit('Refusing to replace EPG: major coverage regression')
           PY
 
       - name: Publish updated guide
