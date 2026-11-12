@@ -6,6 +6,7 @@ on:
     paths:
       - 'config/**'
       - 'scripts/**'
+      - 'tests/**'
       - '.github/workflows/update-epg.yml'
   schedule:
     - cron: '0 2 * * *'
@@ -44,6 +45,9 @@ jobs:
       - name: Install upstream dependencies
         working-directory: upstream
         run: npm ci
+
+      - name: Test channel selection logic
+        run: python3 tests/test_select_channels.py
 
       - name: Select channels
         run: python3 scripts/select_channels.py config/channels.json upstream work/channels
