@@ -12,14 +12,15 @@ with TemporaryDirectory() as temp:
     upstream = root / "upstream"
     cases = [
         ("us", "sites/mock/us.channels.xml", [
-            ("Showtime Extreme East", "us#showtime-extreme-east", ""),
-            ("Showtime Extreme West", "us#showtime-extreme-west", ""),
-            ("Showtime Extreme West duplicate", "us#showtime-extreme-west", ""),
+            ("Showtime Extreme East", "us#showtime-extreme-east", "ShowtimeExtreme.us@East"),
+            ("Showtime Extreme West", "us#showtime-extreme-west", "ShowtimeExtreme.us@West"),
+            ("Showtime Extreme West duplicate", "us#showtime-extreme-west", "ShowtimeExtreme.us@West"),
             ("Random Channel", "us#random", ""),
+            ("Showtime Invalid No ID", "us#showtime-invalid", ""),
         ], ["Showtime"]),
         ("uk", "sites/mock/uk.channels.xml", [
-            ("W", "GB#1", ""),
-            ("World Documentary", "GB#2", ""),
+            ("W", "GB#1", "W.uk"),
+            ("World Documentary", "GB#2", "WorldDoc.uk"),
             ("Sky Cinema Premiere", "GB#3", "SkyCinemaPremiere.uk"),
         ], ["W", "Sky Cinema"]),
     ]
@@ -48,6 +49,6 @@ with TemporaryDirectory() as temp:
     assert len(uk) == 2, f"Expected only W and Sky Cinema, got {len(uk)}"
     assert all(ch.get("xmltv_id") for ch in list(us) + list(uk))
     assert len({ch.get("xmltv_id") for ch in us}) == len(us)
-    assert us[0].get("xmltv_id") != us[1].get("xmltv_id")
+    assert {ch.get("xmltv_id") for ch in us} == {"ShowtimeExtreme.us@East", "ShowtimeExtreme.us@West"}
     assert uk[1].get("xmltv_id") == "SkyCinemaPremiere.uk"
-    print("Selection smoke test passed: feeds distinct, missing IDs repaired, duplicates removed.")
+    print("Selection smoke test passed: feeds distinct, canonical IDs preserved, missing IDs skipped, duplicates removed.")
