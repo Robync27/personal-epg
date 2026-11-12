@@ -105,5 +105,13 @@
         "W"
       ]
     }
-  ]
+  ],
+  "fallback": {
+    "max_channels": 150,
+    "preferred_sites": [
+      "tvpassport.com",
+      "tvguide.com",
+      "ontvtonight.com"
+    ]
+  }
 }
