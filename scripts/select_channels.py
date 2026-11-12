@@ -3,7 +3,6 @@
 import json
 import re
 import sys
-import unicodedata
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
@@ -11,15 +10,6 @@ cfg = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
 upstream = Path(sys.argv[2])
 outdir = Path(sys.argv[3])
 outdir.mkdir(parents=True, exist_ok=True)
-
-def fallback_id(name, site_id, region):
-    # Use readable, stable IDs for upstream rows that have no XMLTV ID.
-    # Preserve site_id to distinguish East/West and similarly named feeds.
-    base = unicodedata.normalize("NFKD", name)
-    base = "".join(c for c in base if not unicodedata.combining(c))
-    base = re.sub(r"[^a-zA-Z0-9]+", "", base)[:48] or "Channel"
-    suffix = re.sub(r"[^a-zA-Z0-9]+", "", site_id)[-22:] or "source"
-    return f"{base}.{region}.{suffix}"
 
 for source in cfg["sources"]:
     src = upstream / source["upstream"]
@@ -30,7 +20,7 @@ for source in cfg["sources"]:
     selected = []
     seen = set()
     seen_ids = set()
-    generated = 0
+    missing_ids = []
     for ch in root.findall("channel"):
         name = "".join(ch.itertext()).strip()
         site_id = ch.get("site_id", "")
@@ -41,8 +31,8 @@ for source in cfg["sources"]:
         if not any(p.search(name) for p in patterns):
             continue
         if not ch.get("xmltv_id", "").strip():
-            ch.set("xmltv_id", fallback_id(name, site_id, source["name"]))
-            generated += 1
+            missing_ids.append(name)
+            continue
         key = (ch.get("site"), site_id)
         if key in seen or ch.get('xmltv_id') in seen_ids:
             continue
@@ -67,6 +57,8 @@ for source in cfg["sources"]:
         raise SystemExit(f"Duplicate XMLTV IDs selected for {source['name']}")
     out = outdir / f"{source['name']}.channels.xml"
     ET.ElementTree(outroot).write(out, encoding="utf-8", xml_declaration=True)
-    print(f"{source['name']}: selected {len(outroot)} channels, repaired {generated} blank XMLTV IDs -> {out}")
+    print(f"{source['name']}: selected {len(outroot)} valid channels, skipped {len(missing_ids)} missing XMLTV IDs -> {out}")
+    for missing in missing_ids[:30]:
+        print(f"  skipped missing xmltv_id: {missing}")
     if not len(outroot):
         raise SystemExit(f"No channels selected for {source['name']}")
