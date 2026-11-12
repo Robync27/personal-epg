@@ -44,3 +44,7 @@ The upstream `iptv-org/epg` software is released under The Unlicense. Its source
 ## Fallback source coverage
 
 The fallback pass runs only for selected XMLTV IDs with no primary programme entries. It looks through upstream channel definitions and chooses an alternate source using exact IDs; it does not guess matches based on channel names. A source being listed is not proof that its scraper works or has current listings. The fallback pass is capped at 150 selected channels per update to control runtime. This is **not** a scrape of every channel or every provider. Check the Actions logs for counts and errors; provider terms and rate limits still apply.
+
+## Temporary safeguard (November 2026)
+
+The automated fallback scraping pass is temporarily disabled after a reported decline in TiviMate guide coverage. The US, Canada, and UK primary scrapers remain active. The publishing workflow now checks minimum channel/programme coverage and compares its new guide to the previously published guide before replacing it. These checks may reject an update rather than publish a severely reduced guide. Fallback configuration and selector script are retained for further testing but are not executed by the current workflow.
