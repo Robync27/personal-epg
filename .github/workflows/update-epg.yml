@@ -128,6 +128,9 @@ jobs:
                   raise SystemExit('Refusing to replace EPG: major coverage regression')
           PY
 
+      - name: Report channel schedule coverage
+        run: python3 scripts/report_coverage.py public/epg.xml public/coverage.json
+
       - name: Publish updated guide
         shell: bash
         run: |
@@ -139,7 +142,7 @@ jobs:
           # checkout up to the newest main commit (including workflow edits).
           artifacts_dir="$(mktemp -d)"
           trap 'rm -rf "$artifacts_dir"' EXIT
-          cp public/epg.xml public/epg.xml.gz Canada_EPG.xml.gz "$artifacts_dir/"
+          cp public/epg.xml public/epg.xml.gz public/coverage.json Canada_EPG.xml.gz "$artifacts_dir/"
 
           for attempt in 1 2 3 4; do
             echo "Publish attempt $attempt of 4"
@@ -148,8 +151,9 @@ jobs:
             mkdir -p public
             cp "$artifacts_dir/epg.xml" public/epg.xml
             cp "$artifacts_dir/epg.xml.gz" public/epg.xml.gz
+            cp "$artifacts_dir/coverage.json" public/coverage.json
             cp "$artifacts_dir/Canada_EPG.xml.gz" Canada_EPG.xml.gz
-            git add public/epg.xml public/epg.xml.gz Canada_EPG.xml.gz
+            git add public/epg.xml public/epg.xml.gz public/coverage.json Canada_EPG.xml.gz
 
             if git diff --cached --quiet; then
               echo 'EPG already matches published guide.'
