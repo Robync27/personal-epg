@@ -1,7 +1,7 @@
 {
-  "generated_utc": "2026-11-12T22:56:14+00:00",
+  "generated_utc": "2026-11-12T23:06:43+00:00",
   "channel_count": 807,
-  "programme_count": 152925,
+  "programme_count": 152966,
   "channels_with_programmes": 804,
   "channels_with_remaining_programmes": 804,
   "channels_missing_all_programmes": [
@@ -71,7 +71,7 @@
         "Arise News"
       ],
       "programmes": 137,
-      "remaining_programmes": 120
+      "remaining_programmes": 119
     },
     {
       "xmltv_id": "BBCNews.uk@UKHD",
@@ -79,7 +79,7 @@
         "BBC NEWS HD"
       ],
       "programmes": 347,
-      "remaining_programmes": 298
+      "remaining_programmes": 297
     },
     {
       "xmltv_id": "BBCOne.uk@ChannelIslandsHD",
@@ -215,7 +215,7 @@
         "BBC Two HD"
       ],
       "programmes": 174,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "BBCTwo.uk@NorthernIrelandHD",
@@ -223,7 +223,7 @@
         "BBC Two NI HD"
       ],
       "programmes": 182,
-      "remaining_programmes": 158
+      "remaining_programmes": 157
     },
     {
       "xmltv_id": "BBCTwo.uk@WalesHD",
@@ -231,7 +231,7 @@
         "BBC Two Wal HD"
       ],
       "programmes": 177,
-      "remaining_programmes": 154
+      "remaining_programmes": 153
     },
     {
       "xmltv_id": "BETJams.us@SD",
@@ -239,7 +239,7 @@
         "BET Jams"
       ],
       "programmes": 168,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "BETSoul.us@SD",
@@ -247,7 +247,7 @@
         "BET Soul"
       ],
       "programmes": 168,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "CBATDT.ca@SD",
@@ -255,7 +255,7 @@
         "CBC Fredericton"
       ],
       "programmes": 323,
-      "remaining_programmes": 292
+      "remaining_programmes": 291
     },
     {
       "xmltv_id": "CBCNewsNetwork.ca@SD",
@@ -279,7 +279,7 @@
         "CBC Toronto HDTV"
       ],
       "programmes": 332,
-      "remaining_programmes": 294
+      "remaining_programmes": 293
     },
     {
       "xmltv_id": "CBRTDT.ca@SD",
@@ -287,7 +287,7 @@
         "CBC Calgary HDTV"
       ],
       "programmes": 344,
-      "remaining_programmes": 301
+      "remaining_programmes": 300
     },
     {
       "xmltv_id": "CBUTDT.ca@SD",
@@ -303,7 +303,7 @@
         "CBC Manitoba"
       ],
       "programmes": 335,
-      "remaining_programmes": 297
+      "remaining_programmes": 296
     },
     {
       "xmltv_id": "CBXTDT.ca@SD",
@@ -439,7 +439,7 @@
         "CTV Atlantic (Moncton, NS)"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "CKEMDT.ca@SD",
@@ -471,7 +471,7 @@
         "CTV DRAMA Channel SD"
       ],
       "programmes": 168,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "CTVSciFiChannel.ca@SD",
@@ -479,7 +479,7 @@
         "CTV SCI-FI Channel SD"
       ],
       "programmes": 137,
-      "remaining_programmes": 120
+      "remaining_programmes": 119
     },
     {
       "xmltv_id": "CartoonNetwork.uk@SD",
@@ -487,7 +487,7 @@
         "Cartoon Netwrk"
       ],
       "programmes": 238,
-      "remaining_programmes": 206
+      "remaining_programmes": 205
     },
     {
       "xmltv_id": "Channel4.uk@IrelandHD",
@@ -503,7 +503,7 @@
         "Channel 4+1"
       ],
       "programmes": 230,
-      "remaining_programmes": 198
+      "remaining_programmes": 197
     },
     {
       "xmltv_id": "Channel4.uk@UKHD",
@@ -519,7 +519,7 @@
         "Channel 4+1"
       ],
       "programmes": 230,
-      "remaining_programmes": 198
+      "remaining_programmes": 197
     },
     {
       "xmltv_id": "CitytvSaskatchewan.ca@SD",
@@ -535,7 +535,7 @@
         "DM News English"
       ],
       "programmes": 278,
-      "remaining_programmes": 240
+      "remaining_programmes": 239
     },
     {
       "xmltv_id": "Dave.ie@HD",
@@ -543,7 +543,7 @@
         "U&Dave HD"
       ],
       "programmes": 185,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "Dave.ie@SD",
@@ -551,7 +551,7 @@
         "U&Dave"
       ],
       "programmes": 185,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "E4.ie@SD",
@@ -559,7 +559,7 @@
         "E4"
       ],
       "programmes": 243,
-      "remaining_programmes": 207
+      "remaining_programmes": 206
     },
     {
       "xmltv_id": "E4.uk@HD",
@@ -567,7 +567,7 @@
         "E4 HD"
       ],
       "programmes": 243,
-      "remaining_programmes": 207
+      "remaining_programmes": 206
     },
     {
       "xmltv_id": "E4.uk@Plus1",
@@ -575,7 +575,7 @@
         "E4+1"
       ],
       "programmes": 243,
-      "remaining_programmes": 207
+      "remaining_programmes": 206
     },
     {
       "xmltv_id": "E4.uk@SD",
@@ -583,7 +583,7 @@
         "E4"
       ],
       "programmes": 244,
-      "remaining_programmes": 208
+      "remaining_programmes": 207
     },
     {
       "xmltv_id": "E4Extra.uk@SD",
@@ -591,7 +591,7 @@
         "E4 Extra"
       ],
       "programmes": 165,
-      "remaining_programmes": 142
+      "remaining_programmes": 141
     },
     {
       "xmltv_id": "EWTN.us@English",
@@ -599,7 +599,7 @@
         "EWTN Catholic"
       ],
       "programmes": 280,
-      "remaining_programmes": 243
+      "remaining_programmes": 242
     },
     {
       "xmltv_id": "EWTN.us@Europe",
@@ -607,7 +607,7 @@
         "EWTN Catholic"
       ],
       "programmes": 242,
-      "remaining_programmes": 209
+      "remaining_programmes": 208
     },
     {
       "xmltv_id": "EuronewsEnglish.fr@SD",
@@ -615,7 +615,7 @@
         "Euronews"
       ],
       "programmes": 706,
-      "remaining_programmes": 616
+      "remaining_programmes": 615
     },
     {
       "xmltv_id": "FaithWorldTV.uk@SD",
@@ -631,7 +631,7 @@
         "Food Network"
       ],
       "programmes": 210,
-      "remaining_programmes": 185
+      "remaining_programmes": 184
     },
     {
       "xmltv_id": "FoodNetwork.uk@Plus1",
@@ -639,7 +639,7 @@
         "Food Netwrk+1"
       ],
       "programmes": 210,
-      "remaining_programmes": 185
+      "remaining_programmes": 184
     },
     {
       "xmltv_id": "FoodNetwork.uk@SD",
@@ -647,7 +647,7 @@
         "Food Network"
       ],
       "programmes": 210,
-      "remaining_programmes": 185
+      "remaining_programmes": 184
     },
     {
       "xmltv_id": "GB#1205",
@@ -671,7 +671,7 @@
         "BBC World Sv"
       ],
       "programmes": 526,
-      "remaining_programmes": 452
+      "remaining_programmes": 450
     },
     {
       "xmltv_id": "GB#2903",
@@ -687,7 +687,7 @@
         "WRN Europe"
       ],
       "programmes": 245,
-      "remaining_programmes": 214
+      "remaining_programmes": 213
     },
     {
       "xmltv_id": "GBNews.uk@SD",
@@ -695,7 +695,7 @@
         "GB News HD"
       ],
       "programmes": 84,
-      "remaining_programmes": 74
+      "remaining_programmes": 73
     },
     {
       "xmltv_id": "GeoNewsInternational.pk@SD",
@@ -703,7 +703,7 @@
         "GEO News"
       ],
       "programmes": 345,
-      "remaining_programmes": 298
+      "remaining_programmes": 296
     },
     {
       "xmltv_id": "HBO.us@East",
@@ -742,8 +742,8 @@
       "names": [
         "HBO Zone East"
       ],
-      "programmes": 94,
-      "remaining_programmes": 86
+      "programmes": 93,
+      "remaining_programmes": 83
     },
     {
       "xmltv_id": "ITV1.uk@AngliaHD",
@@ -783,7 +783,7 @@
         "ITV1+1"
       ],
       "programmes": 150,
-      "remaining_programmes": 133
+      "remaining_programmes": 132
     },
     {
       "xmltv_id": "ITV1.uk@MeridianHD",
@@ -807,7 +807,7 @@
         "Ideal World HD"
       ],
       "programmes": 168,
-      "remaining_programmes": 146
+      "remaining_programmes": 145
     },
     {
       "xmltv_id": "JewelleryMaker.uk@SD",
@@ -823,7 +823,7 @@
         "LoveWorld HD"
       ],
       "programmes": 237,
-      "remaining_programmes": 201
+      "remaining_programmes": 200
     },
     {
       "xmltv_id": "MTA1World.uk@HD",
@@ -831,7 +831,7 @@
         "MTA1 World HD"
       ],
       "programmes": 358,
-      "remaining_programmes": 310
+      "remaining_programmes": 309
     },
     {
       "xmltv_id": "MasalaTV.pk@SD",
@@ -839,7 +839,7 @@
         "HUM News"
       ],
       "programmes": 407,
-      "remaining_programmes": 352
+      "remaining_programmes": 350
     },
     {
       "xmltv_id": "More4.ie@SD",
@@ -847,7 +847,7 @@
         "More4"
       ],
       "programmes": 195,
-      "remaining_programmes": 168
+      "remaining_programmes": 167
     },
     {
       "xmltv_id": "More4.uk@HD",
@@ -855,7 +855,7 @@
         "More4 HD"
       ],
       "programmes": 195,
-      "remaining_programmes": 168
+      "remaining_programmes": 167
     },
     {
       "xmltv_id": "More4.uk@Plus1",
@@ -863,7 +863,7 @@
         "More4+1"
       ],
       "programmes": 195,
-      "remaining_programmes": 168
+      "remaining_programmes": 167
     },
     {
       "xmltv_id": "More4.uk@SD",
@@ -871,7 +871,7 @@
         "More4"
       ],
       "programmes": 195,
-      "remaining_programmes": 168
+      "remaining_programmes": 167
     },
     {
       "xmltv_id": "MovieTime.ca@SD",
@@ -879,7 +879,7 @@
         "MovieTime"
       ],
       "programmes": 86,
-      "remaining_programmes": 77
+      "remaining_programmes": 76
     },
     {
       "xmltv_id": "NDTV24x7.in@SD",
@@ -887,7 +887,7 @@
         "NDTV World"
       ],
       "programmes": 336,
-      "remaining_programmes": 291
+      "remaining_programmes": 290
     },
     {
       "xmltv_id": "NHKWorldJapan.jp@SD",
@@ -895,7 +895,7 @@
         "NHK World HD"
       ],
       "programmes": 483,
-      "remaining_programmes": 430
+      "remaining_programmes": 429
     },
     {
       "xmltv_id": "NOWRock.uk@SD",
@@ -927,7 +927,7 @@
         "New Vision TV"
       ],
       "programmes": 342,
-      "remaining_programmes": 296
+      "remaining_programmes": 294
     },
     {
       "xmltv_id": "Now70s.uk@SD",
@@ -943,7 +943,7 @@
         "NOW 80s"
       ],
       "programmes": 85,
-      "remaining_programmes": 72
+      "remaining_programmes": 71
     },
     {
       "xmltv_id": "Now90s00s.uk@Poland",
@@ -959,7 +959,7 @@
         "RTÉ News"
       ],
       "programmes": 165,
-      "remaining_programmes": 145
+      "remaining_programmes": 144
     },
     {
       "xmltv_id": "RewindTV.uk@SD",
@@ -1063,7 +1063,7 @@
         "Sky Atlantic"
       ],
       "programmes": 163,
-      "remaining_programmes": 141
+      "remaining_programmes": 140
     },
     {
       "xmltv_id": "SkyAtlantic.uk@HD",
@@ -1071,7 +1071,7 @@
         "Sky Atlantic HD"
       ],
       "programmes": 163,
-      "remaining_programmes": 141
+      "remaining_programmes": 140
     },
     {
       "xmltv_id": "SkyAtlantic.uk@Plus1",
@@ -1087,7 +1087,7 @@
         "Sky Atlantic"
       ],
       "programmes": 163,
-      "remaining_programmes": 141
+      "remaining_programmes": 140
     },
     {
       "xmltv_id": "SkyCinemaComedy.uk@HD",
@@ -1127,7 +1127,7 @@
         "Sky Crime HD"
       ],
       "programmes": 182,
-      "remaining_programmes": 157
+      "remaining_programmes": 156
     },
     {
       "xmltv_id": "SkyCrime.ie@SD",
@@ -1135,7 +1135,7 @@
         "Sky Crime"
       ],
       "programmes": 182,
-      "remaining_programmes": 157
+      "remaining_programmes": 156
     },
     {
       "xmltv_id": "SkyCrime.uk@HD",
@@ -1143,7 +1143,7 @@
         "Sky Crime HD"
       ],
       "programmes": 182,
-      "remaining_programmes": 157
+      "remaining_programmes": 156
     },
     {
       "xmltv_id": "SkyCrime.uk@Plus1",
@@ -1159,7 +1159,7 @@
         "Sky Crime"
       ],
       "programmes": 182,
-      "remaining_programmes": 157
+      "remaining_programmes": 156
     },
     {
       "xmltv_id": "SkyNews.ie@HD",
@@ -1167,7 +1167,7 @@
         "Sky News HD"
       ],
       "programmes": 277,
-      "remaining_programmes": 241
+      "remaining_programmes": 240
     },
     {
       "xmltv_id": "SkyNews.ie@SD",
@@ -1175,7 +1175,7 @@
         "Sky News"
       ],
       "programmes": 277,
-      "remaining_programmes": 241
+      "remaining_programmes": 240
     },
     {
       "xmltv_id": "SkyNews.uk@HD",
@@ -1183,7 +1183,7 @@
         "Sky News HD"
       ],
       "programmes": 277,
-      "remaining_programmes": 241
+      "remaining_programmes": 240
     },
     {
       "xmltv_id": "SkyNews.uk@SD",
@@ -1191,7 +1191,7 @@
         "Sky News"
       ],
       "programmes": 277,
-      "remaining_programmes": 241
+      "remaining_programmes": 240
     },
     {
       "xmltv_id": "SkyNewsArabia.ae@SD",
@@ -1199,7 +1199,7 @@
         "SkyNewsArabia"
       ],
       "programmes": 244,
-      "remaining_programmes": 213
+      "remaining_programmes": 212
     },
     {
       "xmltv_id": "SkySportsNews.ie@HD",
@@ -1207,7 +1207,7 @@
         "SkySp News HD"
       ],
       "programmes": 186,
-      "remaining_programmes": 155
+      "remaining_programmes": 154
     },
     {
       "xmltv_id": "SkySportsNews.ie@SD",
@@ -1215,7 +1215,7 @@
         "SkySp News"
       ],
       "programmes": 186,
-      "remaining_programmes": 155
+      "remaining_programmes": 154
     },
     {
       "xmltv_id": "SkySportsNews.uk@HD",
@@ -1223,7 +1223,7 @@
         "SkySp News HD"
       ],
       "programmes": 186,
-      "remaining_programmes": 155
+      "remaining_programmes": 154
     },
     {
       "xmltv_id": "SkySportsNews.uk@SD",
@@ -1231,7 +1231,7 @@
         "SkySp News"
       ],
       "programmes": 186,
-      "remaining_programmes": 155
+      "remaining_programmes": 154
     },
     {
       "xmltv_id": "SkyWitness.ie@HD",
@@ -1239,7 +1239,7 @@
         "Sky Witness HD"
       ],
       "programmes": 217,
-      "remaining_programmes": 187
+      "remaining_programmes": 186
     },
     {
       "xmltv_id": "SkyWitness.ie@SD",
@@ -1247,7 +1247,7 @@
         "Sky Witness"
       ],
       "programmes": 217,
-      "remaining_programmes": 187
+      "remaining_programmes": 186
     },
     {
       "xmltv_id": "SkyWitness.uk@HD",
@@ -1255,7 +1255,7 @@
         "Sky Witness HD"
       ],
       "programmes": 217,
-      "remaining_programmes": 187
+      "remaining_programmes": 186
     },
     {
       "xmltv_id": "SkyWitness.uk@Plus1",
@@ -1271,7 +1271,7 @@
         "Sky Witness"
       ],
       "programmes": 217,
-      "remaining_programmes": 187
+      "remaining_programmes": 186
     },
     {
       "xmltv_id": "Slice.ca@SD",
@@ -1279,7 +1279,7 @@
         "Slice TV"
       ],
       "programmes": 196,
-      "remaining_programmes": 170
+      "remaining_programmes": 169
     },
     {
       "xmltv_id": "Starz.us@East",
@@ -1415,7 +1415,7 @@
         "TRT World HD"
       ],
       "programmes": 344,
-      "remaining_programmes": 297
+      "remaining_programmes": 296
     },
     {
       "xmltv_id": "TRTWorld.tr@SD",
@@ -1423,7 +1423,7 @@
         "TRT World"
       ],
       "programmes": 344,
-      "remaining_programmes": 297
+      "remaining_programmes": 296
     },
     {
       "xmltv_id": "TVCNews.ng@SD",
@@ -1431,7 +1431,7 @@
         "TVC News"
       ],
       "programmes": 336,
-      "remaining_programmes": 291
+      "remaining_programmes": 290
     },
     {
       "xmltv_id": "TVWarehouse.uk@SD",
@@ -1439,7 +1439,7 @@
         "TV Warehouse"
       ],
       "programmes": 336,
-      "remaining_programmes": 291
+      "remaining_programmes": 290
     },
     {
       "xmltv_id": "TreehouseTV.ca@SD",
@@ -1447,7 +1447,7 @@
         "Treehouse TV"
       ],
       "programmes": 614,
-      "remaining_programmes": 551
+      "remaining_programmes": 549
     },
     {
       "xmltv_id": "UAlibi.uk@HD",
@@ -1479,7 +1479,7 @@
         "U&Dave HD"
       ],
       "programmes": 185,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "UDave.uk@SD",
@@ -1487,7 +1487,7 @@
         "U&Dave"
       ],
       "programmes": 185,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "UDaveJaVu.uk@SD",
@@ -1495,7 +1495,7 @@
         "U&DaveJaVu"
       ],
       "programmes": 185,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "UGold.uk@HD",
@@ -1503,7 +1503,7 @@
         "U&Gold HD"
       ],
       "programmes": 232,
-      "remaining_programmes": 200
+      "remaining_programmes": 199
     },
     {
       "xmltv_id": "UGold.uk@Plus1",
@@ -1519,7 +1519,7 @@
         "U&Gold"
       ],
       "programmes": 232,
-      "remaining_programmes": 200
+      "remaining_programmes": 199
     },
     {
       "xmltv_id": "UW.uk@Plus1",
@@ -1527,7 +1527,7 @@
         "U&W+1"
       ],
       "programmes": 152,
-      "remaining_programmes": 132
+      "remaining_programmes": 131
     },
     {
       "xmltv_id": "UW.uk@SD",
@@ -1535,7 +1535,7 @@
         "U&W"
       ],
       "programmes": 152,
-      "remaining_programmes": 132
+      "remaining_programmes": 131
     },
     {
       "xmltv_id": "UtsavGold.in@HD",
@@ -1567,7 +1567,7 @@
         "U&W"
       ],
       "programmes": 152,
-      "remaining_programmes": 132
+      "remaining_programmes": 131
     },
     {
       "xmltv_id": "WFXG541.us@HD",
@@ -1575,7 +1575,7 @@
         "WFXG HDTV"
       ],
       "programmes": 195,
-      "remaining_programmes": 167
+      "remaining_programmes": 166
     },
     {
       "xmltv_id": "WFXL311.us@HD",
@@ -1583,7 +1583,7 @@
         "WFXL HDTV"
       ],
       "programmes": 224,
-      "remaining_programmes": 198
+      "remaining_programmes": 197
     },
     {
       "xmltv_id": "WNetwork.ca@East",
@@ -1591,7 +1591,7 @@
         "W Network (East)"
       ],
       "programmes": 81,
-      "remaining_programmes": 72
+      "remaining_programmes": 71
     },
     {
       "xmltv_id": "WNetwork.ca@West",
@@ -1607,7 +1607,7 @@
         "YTV (East)"
       ],
       "programmes": 399,
-      "remaining_programmes": 354
+      "remaining_programmes": 353
     },
     {
       "xmltv_id": "alibi.ie@HD",
@@ -1839,7 +1839,7 @@
         "Investigation Discovery (Canada)"
       ],
       "programmes": 174,
-      "remaining_programmes": 157
+      "remaining_programmes": 156
     },
     {
       "xmltv_id": "ca#1700000441/ciii-27-global",
@@ -1935,7 +1935,7 @@
         "History2 Canada"
       ],
       "programmes": 155,
-      "remaining_programmes": 137
+      "remaining_programmes": 136
     },
     {
       "xmltv_id": "ca#307789150/ctv-comedy-east-channel-hdtv",
@@ -1943,7 +1943,7 @@
         "CTV COMEDY (East) Channel HDTV"
       ],
       "programmes": 332,
-      "remaining_programmes": 297
+      "remaining_programmes": 296
     },
     {
       "xmltv_id": "ca#312871176/cbc-radio-one-ottawa-english",
@@ -1951,7 +1951,7 @@
         "CBC Radio One (Ottawa - English)"
       ],
       "programmes": 176,
-      "remaining_programmes": 158
+      "remaining_programmes": 157
     },
     {
       "xmltv_id": "ca#312871182/cbc-radio-one-ottawa-french",
@@ -1991,7 +1991,7 @@
         "CTV LIFE Channel SD"
       ],
       "programmes": 182,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "ca#3569665439/global-quebec",
@@ -2231,7 +2231,7 @@
         "Global Maritimes"
       ],
       "programmes": 224,
-      "remaining_programmes": 202
+      "remaining_programmes": 201
     },
     {
       "xmltv_id": "ca#3572700440/ctv-regina",
@@ -2359,7 +2359,7 @@
         "CBC Radio One (Windsor)"
       ],
       "programmes": 176,
-      "remaining_programmes": 158
+      "remaining_programmes": 157
     },
     {
       "xmltv_id": "ca#427140022/treehouse-tv-hdtv",
@@ -2367,7 +2367,7 @@
         "Treehouse TV HDTV"
       ],
       "programmes": 614,
-      "remaining_programmes": 551
+      "remaining_programmes": 549
     },
     {
       "xmltv_id": "ca#448257492/global-news-bc-1",
@@ -2391,7 +2391,7 @@
         "Slice TV HDTV"
       ],
       "programmes": 196,
-      "remaining_programmes": 170
+      "remaining_programmes": 169
     },
     {
       "xmltv_id": "ca#538344177/game-show-network-hdtv-canada",
@@ -2399,7 +2399,7 @@
         "Game Show Network HDTV (Canada)"
       ],
       "programmes": 296,
-      "remaining_programmes": 263
+      "remaining_programmes": 262
     },
     {
       "xmltv_id": "ca#538514037/history2-hdtv-canada",
@@ -2407,7 +2407,7 @@
         "History2 HDTV Canada"
       ],
       "programmes": 155,
-      "remaining_programmes": 137
+      "remaining_programmes": 136
     },
     {
       "xmltv_id": "ca#5525379004/citytv-on-demand-canada",
@@ -2439,7 +2439,7 @@
         "CTV Wild (Canada)"
       ],
       "programmes": 204,
-      "remaining_programmes": 178
+      "remaining_programmes": 177
     },
     {
       "xmltv_id": "ca#69021316/ctv-nature-canada",
@@ -2447,7 +2447,7 @@
         "CTV Nature (Canada)"
       ],
       "programmes": 233,
-      "remaining_programmes": 209
+      "remaining_programmes": 208
     },
     {
       "xmltv_id": "ca#69021327/ctv-two-vancouver-islandcivi",
@@ -2487,7 +2487,7 @@
         "CTV Atlantic (Halifax, NS)"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "ca#69022246/ctv-atlantic-sydney-ns",
@@ -2495,7 +2495,7 @@
         "CTV Atlantic (Sydney, NS)"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "ca#69022486/ctv-two-londoncfpl",
@@ -2551,7 +2551,7 @@
         "Investigation Discovery"
       ],
       "programmes": 171,
-      "remaining_programmes": 154
+      "remaining_programmes": 153
     },
     {
       "xmltv_id": "ca#69022719/ctv-two-alberta",
@@ -2583,7 +2583,7 @@
         "Showcase Television (East)"
       ],
       "programmes": 138,
-      "remaining_programmes": 123
+      "remaining_programmes": 122
     },
     {
       "xmltv_id": "ca#69023475/global-regina",
@@ -2607,7 +2607,7 @@
         "CTV Speed HDTV (Canada)"
       ],
       "programmes": 210,
-      "remaining_programmes": 193
+      "remaining_programmes": 192
     },
     {
       "xmltv_id": "ca#69023768/ctv-two-barrietorontockvr",
@@ -2647,7 +2647,7 @@
         "CBC Quebec HDTV"
       ],
       "programmes": 334,
-      "remaining_programmes": 296
+      "remaining_programmes": 295
     },
     {
       "xmltv_id": "ca#69027040/ctv-vancouver-british-columbia-hdtv",
@@ -2695,7 +2695,7 @@
         "Showcase Television HDTV (East)"
       ],
       "programmes": 138,
-      "remaining_programmes": 123
+      "remaining_programmes": 122
     },
     {
       "xmltv_id": "ca#69029905/crave-1-hdtv-west",
@@ -2719,7 +2719,7 @@
         "Food Network (East)"
       ],
       "programmes": 198,
-      "remaining_programmes": 181
+      "remaining_programmes": 180
     },
     {
       "xmltv_id": "ca#69031631/global-bc-hdtv",
@@ -2775,7 +2775,7 @@
         "History Television HDTV (East)"
       ],
       "programmes": 167,
-      "remaining_programmes": 147
+      "remaining_programmes": 146
     },
     {
       "xmltv_id": "ca#69034716/crave-2-hdtv-east",
@@ -2831,7 +2831,7 @@
         "History Television (East)"
       ],
       "programmes": 167,
-      "remaining_programmes": 147
+      "remaining_programmes": 146
     },
     {
       "xmltv_id": "ca#69034908/global-on-demand",
@@ -2847,7 +2847,7 @@
         "MovieTime HDTV"
       ],
       "programmes": 86,
-      "remaining_programmes": 77
+      "remaining_programmes": 76
     },
     {
       "xmltv_id": "ca#69035889/ctv-comedy-east-channel",
@@ -2855,7 +2855,7 @@
         "CTV Comedy (East) Channel"
       ],
       "programmes": 332,
-      "remaining_programmes": 297
+      "remaining_programmes": 296
     },
     {
       "xmltv_id": "ca#69035899/ctv-comedy-west-channel",
@@ -2895,7 +2895,7 @@
         "Global Manitoba HDTV"
       ],
       "programmes": 227,
-      "remaining_programmes": 204
+      "remaining_programmes": 203
     },
     {
       "xmltv_id": "ca#69039270/ytv-hdtv",
@@ -2903,7 +2903,7 @@
         "YTV HDTV"
       ],
       "programmes": 399,
-      "remaining_programmes": 354
+      "remaining_programmes": 353
     },
     {
       "xmltv_id": "ca#69039708/cbc-edmonton-hdtv",
@@ -2927,7 +2927,7 @@
         "CTV Atlantic HDTV"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "ca#69041248/cbc-toronto",
@@ -2935,7 +2935,7 @@
         "CBC Toronto"
       ],
       "programmes": 332,
-      "remaining_programmes": 294
+      "remaining_programmes": 293
     },
     {
       "xmltv_id": "ca#69041269/cbc-networks",
@@ -2943,7 +2943,7 @@
         "CBC Networks"
       ],
       "programmes": 325,
-      "remaining_programmes": 288
+      "remaining_programmes": 287
     },
     {
       "xmltv_id": "ca#69041301/ctv-nothern-ontario-sault-ste-marie",
@@ -2959,7 +2959,7 @@
         "CBC Quebec"
       ],
       "programmes": 334,
-      "remaining_programmes": 296
+      "remaining_programmes": 295
     },
     {
       "xmltv_id": "ca#69041328/global-saint-john",
@@ -2967,7 +2967,7 @@
         "Global Saint John"
       ],
       "programmes": 222,
-      "remaining_programmes": 200
+      "remaining_programmes": 199
     },
     {
       "xmltv_id": "ca#69041335/global-quebec-hdtv",
@@ -2991,7 +2991,7 @@
         "W Network HDTV (East)"
       ],
       "programmes": 81,
-      "remaining_programmes": 72
+      "remaining_programmes": 71
     },
     {
       "xmltv_id": "ca#69041403/global-ontariociii",
@@ -3015,7 +3015,7 @@
         "CTV Atlantic HDTV (Halifax, NS)"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "ca#69041448/ctv-atlantic-hdtv-moncton-ns",
@@ -3023,7 +3023,7 @@
         "CTV Atlantic HDTV (Moncton, NS)"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "ca#69041449/ctv-two-vancouver-islandcivi-hdtv",
@@ -3127,7 +3127,7 @@
         "Global Maritimes"
       ],
       "programmes": 224,
-      "remaining_programmes": 202
+      "remaining_programmes": 201
     },
     {
       "xmltv_id": "ca#69041579/global-maritimes-hdtv",
@@ -3135,7 +3135,7 @@
         "Global Maritimes HDTV"
       ],
       "programmes": 224,
-      "remaining_programmes": 202
+      "remaining_programmes": 201
     },
     {
       "xmltv_id": "ca#69041580/global-regina-hdtv",
@@ -3183,7 +3183,7 @@
         "Global Manitoba"
       ],
       "programmes": 227,
-      "remaining_programmes": 204
+      "remaining_programmes": 203
     },
     {
       "xmltv_id": "ca#69042284/ctv-winnipeg",
@@ -3239,7 +3239,7 @@
         "CBC Fredericton HDTV"
       ],
       "programmes": 323,
-      "remaining_programmes": 292
+      "remaining_programmes": 291
     },
     {
       "xmltv_id": "ca#69042525/cbc-saskatchewan-hdtv",
@@ -3255,7 +3255,7 @@
         "CBC London HDTV"
       ],
       "programmes": 325,
-      "remaining_programmes": 288
+      "remaining_programmes": 287
     },
     {
       "xmltv_id": "ca#69042529/cbc-manitoba-hdtv",
@@ -3263,7 +3263,7 @@
         "CBC Manitoba HDTV"
       ],
       "programmes": 335,
-      "remaining_programmes": 297
+      "remaining_programmes": 296
     },
     {
       "xmltv_id": "ca#69042553/cbc-networks-hdtv",
@@ -3271,7 +3271,7 @@
         "CBC Networks HDTV"
       ],
       "programmes": 325,
-      "remaining_programmes": 288
+      "remaining_programmes": 287
     },
     {
       "xmltv_id": "ca#69042554/cftk-ctv-two-hdtv",
@@ -3295,7 +3295,7 @@
         "CBC Little Current HDTV"
       ],
       "programmes": 332,
-      "remaining_programmes": 294
+      "remaining_programmes": 293
     },
     {
       "xmltv_id": "ca#69042565/cbc-white-river-hdtv",
@@ -3303,7 +3303,7 @@
         "CBC White River HDTV"
       ],
       "programmes": 332,
-      "remaining_programmes": 294
+      "remaining_programmes": 293
     },
     {
       "xmltv_id": "ca#69042566/cbc-sault-st-marie-hdtv",
@@ -3311,7 +3311,7 @@
         "CBC Sault St. Marie HDTV"
       ],
       "programmes": 332,
-      "remaining_programmes": 294
+      "remaining_programmes": 293
     },
     {
       "xmltv_id": "ca#69042567/cbc-sudbury-hdtv",
@@ -3319,7 +3319,7 @@
         "CBC Sudbury HDTV"
       ],
       "programmes": 332,
-      "remaining_programmes": 294
+      "remaining_programmes": 293
     },
     {
       "xmltv_id": "ca#69042573/cbc-north-watson-lake-hdtv",
@@ -3367,7 +3367,7 @@
         "CTV Atlantic HDTV (Sydney, NS)"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "ca#69042628/ctv-northern-ontario-north-bay-hdtv",
@@ -3383,7 +3383,7 @@
         "Global Saint John HDTV"
       ],
       "programmes": 222,
-      "remaining_programmes": 200
+      "remaining_programmes": 199
     },
     {
       "xmltv_id": "ca#69042643/cbc-sudbury-hdtv",
@@ -3391,7 +3391,7 @@
         "CBC Sudbury HDTV"
       ],
       "programmes": 325,
-      "remaining_programmes": 288
+      "remaining_programmes": 287
     },
     {
       "xmltv_id": "ca#69042647/mctv-2-mid-canada-television-hdtv",
@@ -3399,7 +3399,7 @@
         "MCTV-2 Mid-Canada Television HDTV"
       ],
       "programmes": 325,
-      "remaining_programmes": 288
+      "remaining_programmes": 287
     },
     {
       "xmltv_id": "ca#69042649/ctv-northern-ontario-timmins",
@@ -3455,7 +3455,7 @@
         "CTV Two Atlantic HDTV"
       ],
       "programmes": 211,
-      "remaining_programmes": 189
+      "remaining_programmes": 188
     },
     {
       "xmltv_id": "ca#69043409/ytv-west",
@@ -3471,7 +3471,7 @@
         "CTV Atlantic"
       ],
       "programmes": 220,
-      "remaining_programmes": 196
+      "remaining_programmes": 195
     },
     {
       "xmltv_id": "ca#69043514/cbc-news-network",
@@ -3503,7 +3503,7 @@
         "CTV - Réseau des Sports 2"
       ],
       "programmes": 166,
-      "remaining_programmes": 152
+      "remaining_programmes": 151
     },
     {
       "xmltv_id": "ca#69043764/ctv-reseau-des-sports-2-hdtv",
@@ -3511,7 +3511,7 @@
         "CTV - Réseau des Sports 2 HDTV"
       ],
       "programmes": 166,
-      "remaining_programmes": 152
+      "remaining_programmes": 151
     },
     {
       "xmltv_id": "ca#69043791/cbc-chicoutimi",
@@ -3519,7 +3519,7 @@
         "CBC Chicoutimi"
       ],
       "programmes": 334,
-      "remaining_programmes": 296
+      "remaining_programmes": 295
     },
     {
       "xmltv_id": "ca#69043902/global-bc",
@@ -3543,7 +3543,7 @@
         "CTV SCI-FI Channel HDTV"
       ],
       "programmes": 137,
-      "remaining_programmes": 120
+      "remaining_programmes": 119
     },
     {
       "xmltv_id": "ca#69044450/ctv-drama-channel-hdtv",
@@ -3551,7 +3551,7 @@
         "CTV DRAMA Channel HDTV"
       ],
       "programmes": 168,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "ca#69044451/ctv-wild-hdtv-canada",
@@ -3559,7 +3559,7 @@
         "CTV Wild HDTV (Canada)"
       ],
       "programmes": 204,
-      "remaining_programmes": 178
+      "remaining_programmes": 177
     },
     {
       "xmltv_id": "ca#69044506/ctv-two-atlantic",
@@ -3567,7 +3567,7 @@
         "CTV Two Atlantic"
       ],
       "programmes": 211,
-      "remaining_programmes": 189
+      "remaining_programmes": 188
     },
     {
       "xmltv_id": "ca#69044845/ctv-two-alberta-hdtv",
@@ -3583,7 +3583,7 @@
         "CTV Nature HDTV (Canada)"
       ],
       "programmes": 233,
-      "remaining_programmes": 209
+      "remaining_programmes": 208
     },
     {
       "xmltv_id": "ca#69045105/ctv-news-channel",
@@ -3591,7 +3591,7 @@
         "CTV News Channel"
       ],
       "programmes": 256,
-      "remaining_programmes": 236
+      "remaining_programmes": 235
     },
     {
       "xmltv_id": "ca#69045411/ctv-northern-ontario",
@@ -3631,7 +3631,7 @@
         "The Discovery Channel (East)"
       ],
       "programmes": 170,
-      "remaining_programmes": 147
+      "remaining_programmes": 146
     },
     {
       "xmltv_id": "ca#69047350/ctv-news-channel-hdtv",
@@ -3639,7 +3639,7 @@
         "CTV News Channel HDTV"
       ],
       "programmes": 256,
-      "remaining_programmes": 236
+      "remaining_programmes": 235
     },
     {
       "xmltv_id": "ca#69047922/global-quebec",
@@ -3727,7 +3727,7 @@
         "CTV LIFE Channel HDTV"
       ],
       "programmes": 182,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "ca#923747117/citytv-saskatchewan-hdtv",
@@ -3807,7 +3807,7 @@
         "True History HDTV"
       ],
       "programmes": 336,
-      "remaining_programmes": 301
+      "remaining_programmes": 300
     },
     {
       "xmltv_id": "us#1167352203/amc-ip-feed",
@@ -3831,7 +3831,7 @@
         "Discovery Turbo SDTV"
       ],
       "programmes": 180,
-      "remaining_programmes": 163
+      "remaining_programmes": 162
     },
     {
       "xmltv_id": "us#1306941048/wfxg-grit-tv",
@@ -3847,7 +3847,7 @@
         "AMC Plus On Demand"
       ],
       "programmes": 168,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "us#1375391785/wfxl-comet",
@@ -3871,7 +3871,7 @@
         "Military History Channel HDTV"
       ],
       "programmes": 153,
-      "remaining_programmes": 137
+      "remaining_programmes": 136
     },
     {
       "xmltv_id": "us#14417974637/kfxb-ctn-international",
@@ -3887,7 +3887,7 @@
         "WFXU Defy"
       ],
       "programmes": 241,
-      "remaining_programmes": 216
+      "remaining_programmes": 215
     },
     {
       "xmltv_id": "us#1488014911/wfxt-laff-tv",
@@ -3895,7 +3895,7 @@
         "WFXT Laff TV"
       ],
       "programmes": 336,
-      "remaining_programmes": 301
+      "remaining_programmes": 300
     },
     {
       "xmltv_id": "us#1508210850/discovery-life-channel-in-hdtv",
@@ -3903,7 +3903,7 @@
         "Discovery Life Channel in HDTV"
       ],
       "programmes": 146,
-      "remaining_programmes": 129
+      "remaining_programmes": 128
     },
     {
       "xmltv_id": "us#15421112733/kvaw-mtv-tr3s-sdtv",
@@ -3927,7 +3927,7 @@
         "WFXU HDTV"
       ],
       "programmes": 285,
-      "remaining_programmes": 253
+      "remaining_programmes": 252
     },
     {
       "xmltv_id": "us#1700578539/better-life-tv",
@@ -4039,7 +4039,7 @@
         "WFXZ Biz Television"
       ],
       "programmes": 245,
-      "remaining_programmes": 222
+      "remaining_programmes": 221
     },
     {
       "xmltv_id": "us#1748544105/wfxz-cd4",
@@ -4047,7 +4047,7 @@
         "WFXZ-CD4"
       ],
       "programmes": 336,
-      "remaining_programmes": 301
+      "remaining_programmes": 300
     },
     {
       "xmltv_id": "us#17553870489/kfxv-altavision-hdtv",
@@ -4063,7 +4063,7 @@
         "WAMI Better Tomorrow, Today"
       ],
       "programmes": 168,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "us#17659726107/kfxl-roar",
@@ -4143,7 +4143,7 @@
         "WTBS France 24"
       ],
       "programmes": 832,
-      "remaining_programmes": 737
+      "remaining_programmes": 736
     },
     {
       "xmltv_id": "us#367057965/wtbs-qvc",
@@ -4151,7 +4151,7 @@
         "WTBS QVC"
       ],
       "programmes": 118,
-      "remaining_programmes": 105
+      "remaining_programmes": 104
     },
     {
       "xmltv_id": "us#367058032/wtbs-true-health-tv",
@@ -4167,7 +4167,7 @@
         "WTBS Jewelry Television"
       ],
       "programmes": 101,
-      "remaining_programmes": 91
+      "remaining_programmes": 90
     },
     {
       "xmltv_id": "us#367058316/wtbs-ntd-america",
@@ -4175,7 +4175,7 @@
         "WTBS NTD America"
       ],
       "programmes": 336,
-      "remaining_programmes": 301
+      "remaining_programmes": 300
     },
     {
       "xmltv_id": "us#367059357/wtbs-newsmax-tv",
@@ -4183,7 +4183,7 @@
         "WTBS Newsmax TV"
       ],
       "programmes": 146,
-      "remaining_programmes": 132
+      "remaining_programmes": 131
     },
     {
       "xmltv_id": "us#3676310471/china-movie-channel",
@@ -4247,7 +4247,7 @@
         "WFXP Bounce TV"
       ],
       "programmes": 181,
-      "remaining_programmes": 158
+      "remaining_programmes": 157
     },
     {
       "xmltv_id": "us#4225500324/kamc-bounce-tv",
@@ -4295,7 +4295,7 @@
         "HMTV (Sling)"
       ],
       "programmes": 336,
-      "remaining_programmes": 301
+      "remaining_programmes": 300
     },
     {
       "xmltv_id": "us#449465968/investigation-discovery-hd-west",
@@ -4311,7 +4311,7 @@
         "WFXL Charge TV"
       ],
       "programmes": 216,
-      "remaining_programmes": 193
+      "remaining_programmes": 192
     },
     {
       "xmltv_id": "us#4665146837/wfxz-cd2",
@@ -4399,7 +4399,7 @@
         "WFXT Charge!"
       ],
       "programmes": 216,
-      "remaining_programmes": 193
+      "remaining_programmes": 192
     },
     {
       "xmltv_id": "us#5783235018/wmgm-great-entertainment-television-great",
@@ -4407,7 +4407,7 @@
         "WMGM Great Entertainment Television (great.)"
       ],
       "programmes": 203,
-      "remaining_programmes": 181
+      "remaining_programmes": 180
     },
     {
       "xmltv_id": "us#5783260887/wmgm-hdtv-univision-40",
@@ -4415,7 +4415,7 @@
         "WMGM HDTV Univision 40"
       ],
       "programmes": 183,
-      "remaining_programmes": 167
+      "remaining_programmes": 166
     },
     {
       "xmltv_id": "us#5837254299/hallmark-family-west",
@@ -4463,7 +4463,7 @@
         "FXX HDTV (East)"
       ],
       "programmes": 301,
-      "remaining_programmes": 276
+      "remaining_programmes": 275
     },
     {
       "xmltv_id": "us#666275455/fxx-east",
@@ -4471,7 +4471,7 @@
         "FXX (East)"
       ],
       "programmes": 301,
-      "remaining_programmes": 276
+      "remaining_programmes": 275
     },
     {
       "xmltv_id": "us#666276808/fxx-hdtv-west",
@@ -4527,7 +4527,7 @@
         "Lifetime Real Women"
       ],
       "programmes": 189,
-      "remaining_programmes": 169
+      "remaining_programmes": 168
     },
     {
       "xmltv_id": "us#69021678/discovery-turbo-hdtv",
@@ -4535,7 +4535,7 @@
         "Discovery Turbo HDTV"
       ],
       "programmes": 180,
-      "remaining_programmes": 163
+      "remaining_programmes": 162
     },
     {
       "xmltv_id": "us#69021684/paramount-with-showtime-hdtv-east",
@@ -4623,7 +4623,7 @@
         "CBET Windsor"
       ],
       "programmes": 334,
-      "remaining_programmes": 296
+      "remaining_programmes": 295
     },
     {
       "xmltv_id": "us#69022571/food-network-hawaii",
@@ -4639,39 +4639,39 @@
         "Investigation Discovery"
       ],
       "programmes": 171,
-      "remaining_programmes": 154
+      "remaining_programmes": 153
     },
     {
       "xmltv_id": "us#69022688/discovery-family-channel-sdtv",
       "names": [
         "Discovery Family Channel SDTV"
       ],
-      "programmes": 230,
-      "remaining_programmes": 192
+      "programmes": 324,
+      "remaining_programmes": 285
     },
     {
       "xmltv_id": "us#69022779/ktbs-hdtv",
       "names": [
         "KTBS HDTV"
       ],
-      "programmes": 160,
-      "remaining_programmes": 160
+      "programmes": 189,
+      "remaining_programmes": 189
     },
     {
       "xmltv_id": "us#69022890/wfxg-bounce-tv",
       "names": [
         "WFXG Bounce TV"
       ],
-      "programmes": 182,
-      "remaining_programmes": 159
+      "programmes": 154,
+      "remaining_programmes": 130
     },
     {
       "xmltv_id": "us#69022891/wfxt-hdtv",
       "names": [
         "WFXT HDTV"
       ],
-      "programmes": 178,
-      "remaining_programmes": 178
+      "programmes": 125,
+      "remaining_programmes": 125
     },
     {
       "xmltv_id": "us#69022898/fx-west",
@@ -4711,7 +4711,7 @@
         "Hallmark Channel (East)"
       ],
       "programmes": 77,
-      "remaining_programmes": 69
+      "remaining_programmes": 68
     },
     {
       "xmltv_id": "us#69023295/freeform-hawaii",
@@ -4759,7 +4759,7 @@
         "Syfy (East)"
       ],
       "programmes": 144,
-      "remaining_programmes": 123
+      "remaining_programmes": 122
     },
     {
       "xmltv_id": "us#69023381/food-network-west",
@@ -4799,7 +4799,7 @@
         "VH1 (East)"
       ],
       "programmes": 211,
-      "remaining_programmes": 182
+      "remaining_programmes": 181
     },
     {
       "xmltv_id": "us#69023856/cinemax-hdtv-east",
@@ -4831,7 +4831,7 @@
         "MTV-U"
       ],
       "programmes": 84,
-      "remaining_programmes": 76
+      "remaining_programmes": 75
     },
     {
       "xmltv_id": "us#69025175/kfxa-roar",
@@ -4847,7 +4847,7 @@
         "WFXP HDTV"
       ],
       "programmes": 199,
-      "remaining_programmes": 170
+      "remaining_programmes": 169
     },
     {
       "xmltv_id": "us#69025541/campus-movie-channel",
@@ -4879,7 +4879,7 @@
         "The History Channel en Español"
       ],
       "programmes": 196,
-      "remaining_programmes": 178
+      "remaining_programmes": 177
     },
     {
       "xmltv_id": "us#69026179/the-movie-channel-east",
@@ -4895,7 +4895,7 @@
         "E! Entertainment Television"
       ],
       "programmes": 200,
-      "remaining_programmes": 183
+      "remaining_programmes": 182
     },
     {
       "xmltv_id": "us#69026308/wfxg",
@@ -4903,7 +4903,7 @@
         "WFXG"
       ],
       "programmes": 195,
-      "remaining_programmes": 167
+      "remaining_programmes": 166
     },
     {
       "xmltv_id": "us#69026484/tbs-superstation-hdtv-east",
@@ -4927,7 +4927,7 @@
         "Hallmark Mystery"
       ],
       "programmes": 84,
-      "remaining_programmes": 76
+      "remaining_programmes": 75
     },
     {
       "xmltv_id": "us#69027263/mtv2-west",
@@ -4951,7 +4951,7 @@
         "Military History Channel"
       ],
       "programmes": 153,
-      "remaining_programmes": 137
+      "remaining_programmes": 136
     },
     {
       "xmltv_id": "us#69027734/mtv-live-hdtv",
@@ -4959,7 +4959,7 @@
         "MTV Live HDTV"
       ],
       "programmes": 176,
-      "remaining_programmes": 159
+      "remaining_programmes": 158
     },
     {
       "xmltv_id": "us#69027791/kfxk-hdtv",
@@ -4983,7 +4983,7 @@
         "WYFX HDTV"
       ],
       "programmes": 244,
-      "remaining_programmes": 213
+      "remaining_programmes": 212
     },
     {
       "xmltv_id": "us#69028270/food-network-hdtv-east",
@@ -4991,7 +4991,7 @@
         "Food Network HDTV (East)"
       ],
       "programmes": 198,
-      "remaining_programmes": 181
+      "remaining_programmes": 180
     },
     {
       "xmltv_id": "us#69028388/kfxl",
@@ -5031,7 +5031,7 @@
         "WFXR HDTV"
       ],
       "programmes": 217,
-      "remaining_programmes": 192
+      "remaining_programmes": 191
     },
     {
       "xmltv_id": "us#69029028/wfxr-antenna-tv",
@@ -5039,7 +5039,7 @@
         "WFXR Antenna TV"
       ],
       "programmes": 285,
-      "remaining_programmes": 250
+      "remaining_programmes": 249
     },
     {
       "xmltv_id": "us#69029029/wfxr-bounce",
@@ -5047,7 +5047,7 @@
         "WFXR Bounce"
       ],
       "programmes": 181,
-      "remaining_programmes": 158
+      "remaining_programmes": 157
     },
     {
       "xmltv_id": "us#69029061/wmtv-metv",
@@ -5079,7 +5079,7 @@
         "WYFX HDTV"
       ],
       "programmes": 244,
-      "remaining_programmes": 213
+      "remaining_programmes": 212
     },
     {
       "xmltv_id": "us#69029963/wmtv",
@@ -5119,7 +5119,7 @@
         "WFXB"
       ],
       "programmes": 198,
-      "remaining_programmes": 170
+      "remaining_programmes": 169
     },
     {
       "xmltv_id": "us#69030643/history-hdtv-east",
@@ -5135,7 +5135,7 @@
         "The Discovery Channel HDTV (East)"
       ],
       "programmes": 170,
-      "remaining_programmes": 147
+      "remaining_programmes": 146
     },
     {
       "xmltv_id": "us#69030698/discovery-familia-us-feed",
@@ -5143,7 +5143,7 @@
         "Discovery Familia (U.S. feed)"
       ],
       "programmes": 259,
-      "remaining_programmes": 232
+      "remaining_programmes": 231
     },
     {
       "xmltv_id": "us#69030731/usa-network-hdtv-east",
@@ -5151,7 +5151,7 @@
         "USA Network HDTV (East)"
       ],
       "programmes": 137,
-      "remaining_programmes": 120
+      "remaining_programmes": 119
     },
     {
       "xmltv_id": "us#69030773/food-network-east",
@@ -5159,7 +5159,7 @@
         "Food Network (East)"
       ],
       "programmes": 198,
-      "remaining_programmes": 181
+      "remaining_programmes": 180
     },
     {
       "xmltv_id": "us#69030779/bravo-hdtv-east",
@@ -5175,7 +5175,7 @@
         "WFXL"
       ],
       "programmes": 224,
-      "remaining_programmes": 198
+      "remaining_programmes": 197
     },
     {
       "xmltv_id": "us#69030917/wfxp",
@@ -5183,7 +5183,7 @@
         "WFXP"
       ],
       "programmes": 199,
-      "remaining_programmes": 170
+      "remaining_programmes": 169
     },
     {
       "xmltv_id": "us#69030967/syfy-hdtv",
@@ -5191,7 +5191,7 @@
         "Syfy HDTV"
       ],
       "programmes": 144,
-      "remaining_programmes": 123
+      "remaining_programmes": 122
     },
     {
       "xmltv_id": "us#69030993/showtime-2-hdtv-east",
@@ -5263,7 +5263,7 @@
         "Hallmark Mystery HDTV"
       ],
       "programmes": 84,
-      "remaining_programmes": 76
+      "remaining_programmes": 75
     },
     {
       "xmltv_id": "us#69031566/freeform-hdtv-east",
@@ -5375,7 +5375,7 @@
         "VH1 HDTV (East)"
       ],
       "programmes": 211,
-      "remaining_programmes": 182
+      "remaining_programmes": 181
     },
     {
       "xmltv_id": "us#69032459/mtv-hdtv-east",
@@ -5383,7 +5383,7 @@
         "MTV HDTV (East)"
       ],
       "programmes": 217,
-      "remaining_programmes": 182
+      "remaining_programmes": 181
     },
     {
       "xmltv_id": "us#69032491/lifetime-television-hdtv-west",
@@ -5455,7 +5455,7 @@
         "WFXB Start TV"
       ],
       "programmes": 178,
-      "remaining_programmes": 159
+      "remaining_programmes": 158
     },
     {
       "xmltv_id": "us#69033782/syfy-hdtv-west",
@@ -5487,7 +5487,7 @@
         "Discovery Theater HDTV (Latin America)"
       ],
       "programmes": 193,
-      "remaining_programmes": 169
+      "remaining_programmes": 168
     },
     {
       "xmltv_id": "us#69034116/paramount-network-hdtv-west",
@@ -5527,7 +5527,7 @@
         "Investigation Discovery HDTV"
       ],
       "programmes": 171,
-      "remaining_programmes": 154
+      "remaining_programmes": 153
     },
     {
       "xmltv_id": "us#69034651/mgm-hdtv-east",
@@ -5543,7 +5543,7 @@
         "Hallmark Channel HDTV (East)"
       ],
       "programmes": 77,
-      "remaining_programmes": 69
+      "remaining_programmes": 68
     },
     {
       "xmltv_id": "us#69034860/hallmark-channel-hdtv-west",
@@ -5767,7 +5767,7 @@
         "Discovery Family Channel HDTV"
       ],
       "programmes": 324,
-      "remaining_programmes": 286
+      "remaining_programmes": 285
     },
     {
       "xmltv_id": "us#69037813/wmgm-true-crime-network",
@@ -5775,7 +5775,7 @@
         "WMGM True Crime Network"
       ],
       "programmes": 178,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "us#69037954/wfxr",
@@ -5783,7 +5783,7 @@
         "WFXR"
       ],
       "programmes": 217,
-      "remaining_programmes": 192
+      "remaining_programmes": 191
     },
     {
       "xmltv_id": "us#69038620/usa-network-hdtv-west",
@@ -5807,7 +5807,7 @@
         "Manhattan Neighborhood Network 1 - Community Channel"
       ],
       "programmes": 238,
-      "remaining_programmes": 215
+      "remaining_programmes": 214
     },
     {
       "xmltv_id": "us#69039896/manhattan-neighborhood-network-3-spirit-channel",
@@ -5815,7 +5815,7 @@
         "Manhattan Neighborhood Network 3 - Spirit Channel"
       ],
       "programmes": 233,
-      "remaining_programmes": 210
+      "remaining_programmes": 209
     },
     {
       "xmltv_id": "us#69039927/manhattan-neighborhood-network-4-culture-channel",
@@ -5823,7 +5823,7 @@
         "Manhattan Neighborhood Network 4 - Culture Channel"
       ],
       "programmes": 262,
-      "remaining_programmes": 236
+      "remaining_programmes": 235
     },
     {
       "xmltv_id": "us#69039938/manhattan-neighborhood-network-2-lifestyle-channel",
@@ -5831,7 +5831,7 @@
         "Manhattan Neighborhood Network 2 - Lifestyle Channel"
       ],
       "programmes": 278,
-      "remaining_programmes": 251
+      "remaining_programmes": 250
     },
     {
       "xmltv_id": "us#69041046/wfxb-metv",
@@ -5847,7 +5847,7 @@
         "WMGM True Crime Network"
       ],
       "programmes": 178,
-      "remaining_programmes": 161
+      "remaining_programmes": 160
     },
     {
       "xmltv_id": "us#69042178/mtv-music-hdtv-italy",
@@ -5855,7 +5855,7 @@
         "MTV MUSIC HDTV (Italy)"
       ],
       "programmes": 14,
-      "remaining_programmes": 14
+      "remaining_programmes": 13
     },
     {
       "xmltv_id": "us#69042404/cbet-windsor-hdtv",
@@ -5863,7 +5863,7 @@
         "CBET Windsor HDTV"
       ],
       "programmes": 334,
-      "remaining_programmes": 296
+      "remaining_programmes": 295
     },
     {
       "xmltv_id": "us#69042593/kaxt-emtv-vietnamese",
@@ -5879,7 +5879,7 @@
         "VH1 Classic"
       ],
       "programmes": 14,
-      "remaining_programmes": 14
+      "remaining_programmes": 13
     },
     {
       "xmltv_id": "us#69043189/hbo-east-spanish",
@@ -5919,7 +5919,7 @@
         "Discovery Turbo HDTV (European Feed)"
       ],
       "programmes": 180,
-      "remaining_programmes": 163
+      "remaining_programmes": 162
     },
     {
       "xmltv_id": "us#69044139/investigation-discovery",
@@ -5927,7 +5927,7 @@
         "Investigation Discovery"
       ],
       "programmes": 171,
-      "remaining_programmes": 154
+      "remaining_programmes": 153
     },
     {
       "xmltv_id": "us#69044140/investigation-discovery-hdtv",
@@ -5935,7 +5935,7 @@
         "Investigation Discovery HDTV"
       ],
       "programmes": 171,
-      "remaining_programmes": 154
+      "remaining_programmes": 153
     },
     {
       "xmltv_id": "us#69044147/discovery-family-channel",
@@ -5943,7 +5943,7 @@
         "Discovery Family Channel"
       ],
       "programmes": 324,
-      "remaining_programmes": 286
+      "remaining_programmes": 285
     },
     {
       "xmltv_id": "us#69044416/wfxl-roar",
@@ -5951,7 +5951,7 @@
         "WFXL ROAR"
       ],
       "programmes": 243,
-      "remaining_programmes": 219
+      "remaining_programmes": 218
     },
     {
       "xmltv_id": "us#69044432/mtv2-hdtv-east",
@@ -5959,7 +5959,7 @@
         "MTV2 HDTV (East)"
       ],
       "programmes": 214,
-      "remaining_programmes": 193
+      "remaining_programmes": 192
     },
     {
       "xmltv_id": "us#69044992/kmtv-grit-tv",
@@ -6103,7 +6103,7 @@
         "The Discovery Channel en Español"
       ],
       "programmes": 136,
-      "remaining_programmes": 121
+      "remaining_programmes": 120
     },
     {
       "xmltv_id": "us#69046936/the-history-channel-argentina",
@@ -6127,7 +6127,7 @@
         "The Discovery Channel (East)"
       ],
       "programmes": 170,
-      "remaining_programmes": 147
+      "remaining_programmes": 146
     },
     {
       "xmltv_id": "us#69046977/bravo-east",
@@ -6191,7 +6191,7 @@
         "USA Network (East)"
       ],
       "programmes": 137,
-      "remaining_programmes": 120
+      "remaining_programmes": 119
     },
     {
       "xmltv_id": "us#69047126/mtv2-east",
@@ -6199,7 +6199,7 @@
         "MTV2 (East)"
       ],
       "programmes": 214,
-      "remaining_programmes": 193
+      "remaining_programmes": 192
     },
     {
       "xmltv_id": "us#69047159/lifetime-television-east",
@@ -6215,7 +6215,7 @@
         "MTV (East)"
       ],
       "programmes": 217,
-      "remaining_programmes": 182
+      "remaining_programmes": 181
     },
     {
       "xmltv_id": "us#69047170/freeform-east",
@@ -6271,7 +6271,7 @@
         "Discovery Life Channel"
       ],
       "programmes": 146,
-      "remaining_programmes": 129
+      "remaining_programmes": 128
     },
     {
       "xmltv_id": "us#69048309/mtv-classic-east",
@@ -6279,7 +6279,7 @@
         "MTV Classic (East)"
       ],
       "programmes": 168,
-      "remaining_programmes": 151
+      "remaining_programmes": 150
     },
     {
       "xmltv_id": "us#69048776/kfxa-roar",
@@ -6391,7 +6391,7 @@
         "WFXG Court TV"
       ],
       "programmes": 179,
-      "remaining_programmes": 162
+      "remaining_programmes": 161
     },
     {
       "xmltv_id": "us#8205777127/wfxp-antenna-tv",
@@ -6399,7 +6399,7 @@
         "WFXP Antenna TV"
       ],
       "programmes": 285,
-      "remaining_programmes": 250
+      "remaining_programmes": 249
     },
     {
       "xmltv_id": "us#8352030752/wfxu-start-tv",
@@ -6407,7 +6407,7 @@
         "WFXU Start TV"
       ],
       "programmes": 178,
-      "remaining_programmes": 159
+      "remaining_programmes": 158
     },
     {
       "xmltv_id": "us#8383555091/kmtv-ion-mystery",
