@@ -54,8 +54,10 @@ def apply(xml_path, map_path):
             p.set("channel", target)
             new_programmes.append(p)
         result[target] = {"status": "mapped", "source": source, "copied": len(programmes[source])}
-    for ch in new_channels:
-        root.append(ch)
+    # XMLTV requires channel declarations to precede programme entries.
+    first_programme = next((i for i, elem in enumerate(root) if elem.tag == "programme"), len(root))
+    for offset, ch in enumerate(new_channels):
+        root.insert(first_programme + offset, ch)
     for p in new_programmes:
         root.append(p)
     if new_channels or new_programmes:
