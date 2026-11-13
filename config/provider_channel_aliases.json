@@ -121,6 +121,24 @@
         "sky-cinema-hits",
         "sky-cinema-hits-hd"
       ]
+    },
+    "UK| SKY CINEMA ACTION": {
+      "label": "Sky Cinema Action",
+      "source_ids": [
+        "SkyCinemaAction.uk@HD",
+        "SkyCinemaAction.uk@SD",
+        "sky-cinema-action-hd",
+        "sky-cinema-action"
+      ]
+    },
+    "UK| SKY CINEMA THRILLER": {
+      "label": "Sky Cinema Thriller",
+      "source_ids": [
+        "SkyCinemaThriller.uk@HD",
+        "SkyCinemaThriller.uk@SD",
+        "sky-cinema-thriller-hd",
+        "sky-cinema-thriller"
+      ]
     }
   }
 }
