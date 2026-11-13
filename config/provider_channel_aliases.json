@@ -1,0 +1,126 @@
+{
+  "description": "Explicit exact-service UK Sky Cinema XMLTV identifiers extracted from user's credential-free channel inventory. No account or stream data.",
+  "aliases": {
+    "SkyCinemaDrama.uk": {
+      "label": "Sky Cinema Drama",
+      "source_ids": [
+        "SkyCinemaDrama.uk@HD",
+        "SkyCinemaDrama.uk@SD",
+        "sky-cinema-drama-hd",
+        "sky-cinema-drama"
+      ]
+    },
+    "SkyCinemaPremiere.uk": {
+      "label": "Sky Cinema Premiere",
+      "source_ids": [
+        "SkyCinemaPremiere.uk@HD",
+        "SkyCinemaPremiere.uk@SD",
+        "sky-cinema-premiere-hd",
+        "sky-cinema-premiere"
+      ]
+    },
+    "SkyPremiere.uk": {
+      "label": "Sky Cinema Premiere",
+      "source_ids": [
+        "SkyCinemaPremiere.uk@HD",
+        "SkyCinemaPremiere.uk@SD",
+        "sky-cinema-premiere-hd",
+        "sky-cinema-premiere"
+      ]
+    },
+    "SkyAction.uk": {
+      "label": "Sky Cinema Action",
+      "source_ids": [
+        "SkyCinemaAction.uk@HD",
+        "SkyCinemaAction.uk@SD",
+        "sky-cinema-action-hd",
+        "sky-cinema-action"
+      ]
+    },
+    "SkyCinemaComedy.uk": {
+      "label": "Sky Cinema Comedy",
+      "source_ids": [
+        "SkyCinemaComedy.uk@HD",
+        "SkyCinemaComedy.uk@SD",
+        "sky-cinema-comedy-hd",
+        "sky-cinema-comedy"
+      ]
+    },
+    "SkyCinemaFamily.uk": {
+      "label": "Sky Cinema Family",
+      "source_ids": [
+        "SkyCinemaFamily.uk@HD",
+        "SkyCinemaFamily.uk@SD",
+        "sky-cinema-family-hd",
+        "sky-cinema-family"
+      ]
+    },
+    "uk.Sky Cinema Family": {
+      "label": "Sky Cinema Family",
+      "source_ids": [
+        "SkyCinemaFamily.uk@HD",
+        "SkyCinemaFamily.uk@SD",
+        "sky-cinema-family-hd",
+        "sky-cinema-family"
+      ]
+    },
+    "SkyCinemaThriller.uk": {
+      "label": "Sky Cinema Thriller",
+      "source_ids": [
+        "SkyCinemaThriller.uk@HD",
+        "SkyCinemaThriller.uk@SD",
+        "sky-cinema-thriller-hd",
+        "sky-cinema-thriller"
+      ]
+    },
+    "SkyThriller.uk": {
+      "label": "Sky Cinema Thriller",
+      "source_ids": [
+        "SkyCinemaThriller.uk@HD",
+        "SkyCinemaThriller.uk@SD",
+        "sky-cinema-thriller-hd",
+        "sky-cinema-thriller"
+      ]
+    },
+    "SkyCinemaSciFiHorror.uk": {
+      "label": "Sky Cinema Sci-Fi & Horror",
+      "source_ids": [
+        "SkyCinemaSciFiHorror.uk@HD",
+        "SkyCinemaSciFiHorror.uk@SD",
+        "sky-cinema-sci-fi-horror-hd",
+        "sky-cinema-sci-fi-horror"
+      ]
+    },
+    "uk.Sky Cinema Sci Fi & Horror": {
+      "label": "Sky Cinema Sci-Fi & Horror",
+      "source_ids": [
+        "SkyCinemaSciFiHorror.uk@HD",
+        "SkyCinemaSciFiHorror.uk@SD",
+        "sky-cinema-sci-fi-horror-hd",
+        "sky-cinema-sci-fi-horror"
+      ]
+    },
+    "SkyCinemaAnimation.uk": {
+      "label": "Sky Cinema Animation",
+      "source_ids": [
+        "SkyCinemaAnimation.uk@HD",
+        "SkyCinemaAnimation.uk@SD",
+        "sky-cinema-animation"
+      ]
+    },
+    "SkyCinemaGreats.uk": {
+      "label": "Sky Cinema Greats",
+      "source_ids": [
+        "sky-cinema-greats-hd",
+        "sky-cinema-greats"
+      ]
+    },
+    "SkyCinemaHits.uk": {
+      "label": "Sky Cinema Hits",
+      "source_ids": [
+        "sky-cinema-hits",
+        "sky-cinema-hits-hd"
+      ]
+    }
+  }
+}
