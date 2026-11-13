@@ -59,10 +59,25 @@ jobs:
         working-directory: upstream
         run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=2 --maxConnections=10
 
+      - name: Grab supplemental guides
+        working-directory: upstream
+        shell: bash
+        run: |
+          mkdir -p ../work/supplemental
+          for source in tvpassport tvguide directv tvinsider tvhebdo mytelly tv24 freeview; do
+            echo "Supplemental EPG: $source"
+            if npm run grab -- --channels="../work/channels/$source.channels.xml" --output="../work/supplemental/$source.xml" --days=2 --maxConnections=5; then
+              echo "$source: completed"
+            else
+              echo "::warning::$source failed; preserving primary EPG and continuing"
+              rm -f "../work/supplemental/$source.xml"
+            fi
+          done
+
       - name: Merge and compress XMLTV
         run: |
           mkdir -p public
-          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml
+          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml work/supplemental/*.xml
           gzip -9 -c public/epg.xml > public/epg.xml.gz
           cp public/epg.xml.gz Canada_EPG.xml.gz
           python3 - <<'PY'
