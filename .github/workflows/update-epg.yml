@@ -90,33 +90,24 @@ jobs:
             fi
           done
 
-      - name: Merge and compress XMLTV
+      - name: Build and validate unified XMLTV v2
         run: |
-          mkdir -p public
-          python3 scripts/merge_xmltv.py public/epg.xml work/us.xml work/ca.xml work/uk.xml work/supplemental/*.xml
-          python3 scripts/recover_verified_aliases.py public/epg.xml config/verified_aliases.json
-          gzip -9 -c public/epg.xml > public/epg.xml.gz
+          mkdir -p public work/reports
+          python3 scripts/build_epg_v2.py \
+            --aliases config/verified_aliases.json \
+            --output public/epg.xml \
+            --gzip public/epg.xml.gz \
+            --report work/reports/coverage.json \
+            work/us.xml work/ca.xml work/uk.xml \
+            work/supplemental/tvpassport.xml \
+            work/supplemental/tvguide.xml \
+            work/supplemental/directv.xml \
+            work/supplemental/tvinsider.xml \
+            work/supplemental/tvhebdo.xml \
+            work/supplemental/mytelly.xml \
+            work/supplemental/tv24.xml \
+            work/supplemental/freeview.xml
           cp public/epg.xml.gz Canada_EPG.xml.gz
-          python3 - <<'PY'
-          import xml.etree.ElementTree as ET
-          root=ET.parse('public/epg.xml').getroot()
-          print('channels=', len(root.findall('channel')), 'programmes=', len(root.findall('programme')))
-          assert root.tag == 'tv'
-          assert root.findall('channel')
-          assert root.findall('programme')
-          from datetime import datetime, timezone, timedelta
-          now = datetime.now(timezone.utc)
-          def starts_in_future(p):
-            try:
-              raw = p.get('start','')
-              return datetime.strptime(raw[:14], '%Y%m%d%H%M%S') >= (now.replace(tzinfo=None) - timedelta(hours=12))
-            except ValueError:
-              return False
-          assert any(starts_in_future(p) for p in root.findall('programme')), 'No current or future listings: refusing to publish stale guide'
-          for label in ('HBO', 'Cinemax', 'MoreMAX'):
-            matches = [ch.get('id','') for ch in root.findall('channel') if label.casefold() in ' '.join(x.text or '' for x in ch.findall('display-name')).casefold()]
-            print(f'{label} channel IDs: {matches}')
-          PY
 
       - name: Audit critical Sky Cinema programme coverage
         run: python3 scripts/audit_critical_channels.py public/epg.xml
