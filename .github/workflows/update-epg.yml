@@ -87,13 +87,36 @@ jobs:
           PY
 
       - name: Publish updated guide
+        shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'personal-epg-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add public/epg.xml public/epg.xml.gz Canada_EPG.xml.gz
-          if git diff --cached --quiet; then
-            echo 'No EPG changes to commit.'
-          else
+
+          # Keep the validated output intact when syncing with new commits.
+          tmp="$(mktemp -d)"
+          trap 'rm -rf "$tmp"' EXIT
+          cp public/epg.xml public/epg.xml.gz Canada_EPG.xml.gz "$tmp/"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            mkdir -p public
+            cp "$tmp/epg.xml" public/epg.xml
+            cp "$tmp/epg.xml.gz" public/epg.xml.gz
+            cp "$tmp/Canada_EPG.xml.gz" Canada_EPG.xml.gz
+            git add public/epg.xml public/epg.xml.gz Canada_EPG.xml.gz
+            if git diff --cached --quiet; then
+              echo 'EPG already published.'
+              exit 0
+            fi
             git commit -m 'Update EPG data'
-            git push
-          fi
+            if git push origin HEAD:main; then
+              echo 'EPG published successfully.'
+              exit 0
+            fi
+            echo "Push conflict on attempt $attempt; retrying."
+            sleep 3
+          done
+          echo 'EPG publication failed after 3 attempts.' >&2
+          exit 1
