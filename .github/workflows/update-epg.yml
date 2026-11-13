@@ -118,6 +118,9 @@ jobs:
             print(f'{label} channel IDs: {matches}')
           PY
 
+      - name: Audit critical Sky Cinema programme coverage
+        run: python3 scripts/audit_critical_channels.py public/epg.xml
+
       - name: Level 3 release gate
         run: python3 scripts/validate_release.py public/epg.xml work/baseline/epg.xml public/epg.xml.gz
 
