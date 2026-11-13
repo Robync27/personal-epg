@@ -2,7 +2,7 @@
 
 Personal XMLTV guide builder for TiviMate.
 
-It builds a curated 7-day EPG for:
+It builds a curated 2-day EPG for:
 
 - US premium movie and entertainment channels
 - Canadian entertainment channels
@@ -51,6 +51,6 @@ The automated fallback scraping pass is temporarily disabled after a reported de
 
 ## Automatic operation
 
-The scheduled workflow runs every day at **2:00 a.m. America/Toronto** and can also be triggered manually from **Actions → Update personal EPG → Run workflow**. It scrapes the configured upstream sites, creates a merged seven-day XMLTV guide, validates its minimum schedule coverage, and only then commits `public/epg.xml`, `public/epg.xml.gz` and `Canada_EPG.xml.gz` to the `main` branch. The legacy TiviMate URL remains unchanged. If scraping or validation fails, the workflow does not publish a new guide; the last successfully committed guide remains available. Scheduled GitHub Actions may start later than the cron time, and TiviMate refresh timing is configured separately within TiviMate.
+The scheduled workflow runs every day at **2:00 a.m. America/Toronto** and can also be triggered manually from **Actions → Update personal EPG → Run workflow**. It scrapes the configured upstream sites, creates a merged two-day XMLTV guide, validates its minimum schedule coverage, and only then commits `public/epg.xml`, `public/epg.xml.gz` and `Canada_EPG.xml.gz` to the `main` branch. The legacy TiviMate URL remains unchanged. If scraping or validation fails, the workflow does not publish a new guide; the last successfully committed guide remains available. Scheduled GitHub Actions may start later than the cron time, and TiviMate refresh timing is configured separately within TiviMate.
 
 The fallback selector is currently **disabled** in the production workflow while missing-guide issues are investigated; descriptions above of alternate sources are for the optional code only.
