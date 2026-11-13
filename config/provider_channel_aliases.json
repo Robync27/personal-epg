@@ -139,6 +139,216 @@
         "sky-cinema-thriller-hd",
         "sky-cinema-thriller"
       ]
+    },
+    "HBO.us": {
+      "label": "HBO",
+      "source_ids": [
+        "HBO.us@East"
+      ]
+    },
+    "US-HBO - Pacific Feed": {
+      "label": "HBO West",
+      "source_ids": [
+        "HBO.us@West"
+      ]
+    },
+    "HBO2.us": {
+      "label": "HBO 2",
+      "source_ids": [
+        "HBO2.us@East"
+      ]
+    },
+    "HBOZone.us": {
+      "label": "HBO Zone",
+      "source_ids": [
+        "HBOZone.us@East"
+      ]
+    },
+    "HBOComedy.us": {
+      "label": "HBO Comedy",
+      "source_ids": [
+        "HBOComedy.us@East"
+      ]
+    },
+    "HBOSignature.us": {
+      "label": "HBO Signature",
+      "source_ids": [
+        "HBOSignature.us@East"
+      ]
+    },
+    "Cinemax.us": {
+      "label": "Cinemax East",
+      "source_ids": [
+        "Cinemax.us@East"
+      ]
+    },
+    "US| CINEMAX EAST HD": {
+      "label": "Cinemax East",
+      "source_ids": [
+        "Cinemax.us@East"
+      ]
+    },
+    "US-Cinemax - Pacific Feed": {
+      "label": "Cinemax West",
+      "source_ids": [
+        "Cinemax.us@West"
+      ]
+    },
+    "MoreMax.us": {
+      "label": "MoreMAX",
+      "source_ids": [
+        "MoreMax.us@East"
+      ]
+    },
+    "US| CINEMAX MOREMAX HD": {
+      "label": "MoreMAX",
+      "source_ids": [
+        "MoreMax.us@East"
+      ]
+    },
+    "ActionMax.us": {
+      "label": "ActionMAX",
+      "source_ids": [
+        "ActionMax.us@East"
+      ]
+    },
+    "ACMAXHD ActionMAX HD": {
+      "label": "ActionMAX",
+      "source_ids": [
+        "ActionMax.us@East"
+      ]
+    },
+    "Showtime.us": {
+      "label": "Showtime East",
+      "source_ids": [
+        "Showtime.us@East"
+      ]
+    },
+    "Showtime2.us": {
+      "label": "Showtime 2",
+      "source_ids": [
+        "Showtime2.us@East"
+      ]
+    },
+    "ShowtimeExtreme.us": {
+      "label": "Showtime Extreme",
+      "source_ids": [
+        "ShowtimeExtreme.us@East"
+      ]
+    },
+    "ShowtimeFamilyZone.us": {
+      "label": "Showtime Family Zone",
+      "source_ids": [
+        "ShowtimeFamilyZone.us@East"
+      ]
+    },
+    "ShowtimeNext.us": {
+      "label": "Showtime Next",
+      "source_ids": [
+        "ShowtimeNext.us@East"
+      ]
+    },
+    "ShowtimeShowcase.us": {
+      "label": "Showtime Showcase",
+      "source_ids": [
+        "ShowtimeShowcase.us@East"
+      ]
+    },
+    "ShowtimeWomen.us": {
+      "label": "Showtime Women",
+      "source_ids": [
+        "ShowtimeWomen.us@East"
+      ]
+    },
+    "Starz.us": {
+      "label": "Starz East",
+      "source_ids": [
+        "Starz.us@East"
+      ]
+    },
+    "US-Starz - Pacific": {
+      "label": "Starz West",
+      "source_ids": [
+        "Starz.us@West"
+      ]
+    },
+    "StarzCinema.us": {
+      "label": "Starz Cinema",
+      "source_ids": [
+        "StarzCinema.us@East"
+      ]
+    },
+    "StarzInBlack.us": {
+      "label": "Starz In Black",
+      "source_ids": [
+        "StarzInBlack.us@East"
+      ]
+    },
+    "StarzEdge.us": {
+      "label": "Starz Edge",
+      "source_ids": [
+        "StarzEdge.us@East"
+      ]
+    },
+    "StarzEncore.us": {
+      "label": "Starz Encore",
+      "source_ids": [
+        "StarzEncore.us@East"
+      ]
+    },
+    "StarzEncoreAction.us": {
+      "label": "Starz Encore Action",
+      "source_ids": [
+        "StarzEncoreAction.us@East"
+      ]
+    },
+    "StarzEncoreBlack.us": {
+      "label": "Starz Encore Black",
+      "source_ids": [
+        "StarzEncoreBlack.us@East"
+      ]
+    },
+    "StarzEncoreClassics.us": {
+      "label": "Starz Encore Classic",
+      "source_ids": [
+        "StarzEncoreClassic.us@East"
+      ]
+    },
+    "StarzEncoreFamily.us": {
+      "label": "Starz Encore Family",
+      "source_ids": [
+        "StarzEncoreFamily.us@East"
+      ]
+    },
+    "StarzEncoreSuspense.us": {
+      "label": "Starz Encore Suspense",
+      "source_ids": [
+        "StarzEncoreSuspense.us@East"
+      ]
+    },
+    "StarzEncoreWesterns.us": {
+      "label": "Starz Encore Westerns",
+      "source_ids": [
+        "StarzEncoreWesterns.us@East"
+      ]
+    },
+    "StarzComedy.us": {
+      "label": "Starz Comedy",
+      "source_ids": [
+        "StarzComedy.us@East"
+      ]
+    },
+    "US-Starz Encore - Pacific": {
+      "label": "Starz Encore West",
+      "source_ids": [
+        "StarzEncore.us@West"
+      ]
+    },
+    "StarzKidsFamily.us": {
+      "label": "Starz Kids & Family",
+      "source_ids": [
+        "StarzKidsFamily.us@East"
+      ]
     }
   }
 }
