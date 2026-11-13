@@ -19,11 +19,17 @@ concurrency:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:
       - name: Checkout personal EPG
         uses: actions/checkout@v4
+
+      - name: Preserve previous published guide for regression checks
+        run: |
+          mkdir -p work/baseline
+          cp public/epg.xml work/baseline/epg.xml
 
       - name: Checkout upstream EPG tools
         uses: actions/checkout@v4
@@ -43,6 +49,9 @@ jobs:
       - name: Install upstream dependencies
         working-directory: upstream
         run: npm ci
+
+      - name: Run software regression tests
+        run: python3 -m unittest discover -s tests -v
 
       - name: Select channels
         run: python3 scripts/select_channels.py config/channels.json upstream work/channels
@@ -100,6 +109,9 @@ jobs:
             matches = [ch.get('id','') for ch in root.findall('channel') if label.casefold() in ' '.join(x.text or '' for x in ch.findall('display-name')).casefold()]
             print(f'{label} channel IDs: {matches}')
           PY
+
+      - name: Level 3 release gate
+        run: python3 scripts/validate_release.py public/epg.xml work/baseline/epg.xml
 
       - name: Publish updated guide
         shell: bash
