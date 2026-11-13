@@ -112,6 +112,7 @@ jobs:
       - name: Apply verified provider channel identifiers
         run: |
           python3 scripts/add_provider_aliases.py public/epg.xml config/provider_channel_aliases.json
+          python3 scripts/preserve_channel_metadata.py public/epg.xml work/baseline/epg.xml
           gzip -9 -c public/epg.xml > public/epg.xml.gz
           cp public/epg.xml.gz Canada_EPG.xml.gz
 
