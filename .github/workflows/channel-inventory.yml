@@ -1,0 +1,30 @@
+name: Inspect Published EPG Channels
+on:
+  push:
+    branches:
+      - engineering/epg-per-channel-coverage
+    paths:
+      - .github/workflows/channel-inventory.yml
+permissions:
+  contents: read
+jobs:
+  channel-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print channel IDs and listing counts from published XMLTV
+        run: |
+          python3 - <<'PY'
+          import collections
+          import xml.etree.ElementTree as ET
+          root = ET.parse('public/epg.xml').getroot()
+          counts = collections.Counter(p.get('channel') for p in root.findall('programme'))
+          print('BEGIN_CHANNEL_INVENTORY')
+          for ch in root.findall('channel'):
+              cid = ch.get('id', '')
+              name = next((x.text.strip() for x in ch.findall('display-name') if x.text and x.text.strip()), '')
+              print(f'{cid}\t{name}\t{counts[cid]}')
+          print('END_CHANNEL_INVENTORY')
+          print('CHANNEL_TOTAL', len(root.findall('channel')))
+          print('WITH_PROGRAMMES', sum(counts[ch.get('id')] > 0 for ch in root.findall('channel')))
+          PY
