@@ -49,15 +49,15 @@ jobs:
 
       - name: Grab US guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=2 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=2 --maxConnections=10
 
       - name: Grab Canada guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=2 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=2 --maxConnections=10
 
       - name: Grab UK guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=2 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=2 --maxConnections=10
 
       - name: Merge and compress XMLTV
         run: |
