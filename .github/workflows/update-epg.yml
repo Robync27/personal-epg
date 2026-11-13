@@ -15,7 +15,7 @@ permissions:
 
 concurrency:
   group: personal-epg-update
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -49,15 +49,15 @@ jobs:
 
       - name: Grab US guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=7 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=2 --maxConnections=3
 
       - name: Grab Canada guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=7 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=2 --maxConnections=3
 
       - name: Grab UK guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=7 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=2 --maxConnections=3
 
       - name: Merge and compress XMLTV
         run: |
