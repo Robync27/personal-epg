@@ -18,6 +18,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  regression-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate software tests
+        run: python3 -m unittest discover -s tests -v
+
   build:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -111,7 +118,7 @@ jobs:
           PY
 
       - name: Level 3 release gate
-        run: python3 scripts/validate_release.py public/epg.xml work/baseline/epg.xml
+        run: python3 scripts/validate_release.py public/epg.xml work/baseline/epg.xml public/epg.xml.gz
 
       - name: Publish updated guide
         shell: bash
