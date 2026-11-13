@@ -1,5 +1,5 @@
 {
-  "days": 2,
+  "days": 7,
   "sources": [
     {
       "name": "us",
@@ -102,16 +102,8 @@
         "Dave",
         "Gold",
         "Alibi",
-        "^W$"
+        "W"
       ]
     }
-  ],
-  "fallback": {
-    "max_channels": 150,
-    "preferred_sites": [
-      "tvpassport.com",
-      "tvguide.com",
-      "ontvtonight.com"
-    ]
-  }
+  ]
 }
