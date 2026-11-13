@@ -109,6 +109,12 @@ jobs:
             work/supplemental/freeview.xml
           cp public/epg.xml.gz Canada_EPG.xml.gz
 
+      - name: Apply verified provider channel identifiers
+        run: |
+          python3 scripts/add_provider_aliases.py public/epg.xml config/provider_channel_aliases.json
+          gzip -9 -c public/epg.xml > public/epg.xml.gz
+          cp public/epg.xml.gz Canada_EPG.xml.gz
+
       - name: Audit critical Sky Cinema programme coverage
         run: python3 scripts/audit_critical_channels.py public/epg.xml
 
