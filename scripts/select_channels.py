@@ -15,6 +15,7 @@ for source in cfg['sources']:
     prefix = source.get('site_id_prefix')
     selected = []
     seen = set()
+    candidates = []
     for ch in root.findall('channel'):
         name = ''.join(ch.itertext()).strip()
         site_id = ch.get('site_id', '')
@@ -26,7 +27,15 @@ for source in cfg['sources']:
         if key in seen:
             continue
         seen.add(key)
-        selected.append(ch)
+        candidates.append(ch)
+    limit = source.get('max_channels')
+    if limit:
+        # Prefer channels matched by earlier patterns, especially premium networks.
+        def rank(ch):
+            name = ''.join(ch.itertext()).strip()
+            return next((i for i, p in enumerate(patterns) if p.search(name)), len(patterns))
+        candidates.sort(key=rank)
+    selected = candidates[:limit] if limit else candidates
     outroot = ET.Element('channels')
     for ch in selected:
         outroot.append(ch)
@@ -36,5 +45,5 @@ for source in cfg['sources']:
     out = outdir / f"{source['name']}.channels.xml"
     ET.ElementTree(outroot).write(out, encoding='utf-8', xml_declaration=True)
     print(f"{source['name']}: selected {len(outroot)} channels -> {out}")
-    if not len(outroot):
+    if not len(outroot) and not source.get('optional'):
         raise SystemExit(f"No channels selected for {source['name']}")
