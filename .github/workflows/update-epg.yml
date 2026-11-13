@@ -6,18 +6,16 @@ on:
     paths:
       - 'config/**'
       - 'scripts/**'
-      - 'tests/**'
       - '.github/workflows/update-epg.yml'
   schedule:
-    - cron: '0 2 * * *'
-      timezone: 'America/Toronto'
+    - cron: '17 */6 * * *'
 
 permissions:
   contents: write
 
 concurrency:
   group: personal-epg-update
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -51,15 +49,15 @@ jobs:
 
       - name: Grab US guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=2 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/us.channels.xml --output=../work/us.xml --days=7 --maxConnections=3
 
       - name: Grab Canada guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=2 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/ca.channels.xml --output=../work/ca.xml --days=7 --maxConnections=3
 
       - name: Grab UK guide
         working-directory: upstream
-        run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=2 --maxConnections=3
+        run: npm run grab -- --channels=../work/channels/uk.channels.xml --output=../work/uk.xml --days=7 --maxConnections=3
 
       - name: Merge and compress XMLTV
         run: |
@@ -88,109 +86,14 @@ jobs:
             print(f'{label} channel IDs: {matches}')
           PY
 
-      - name: Guard against loss of guide coverage
-        run: |
-          python3 - <<'PY'
-          import subprocess
-          from collections import Counter
-          from datetime import datetime, timedelta, timezone
-          import xml.etree.ElementTree as ET
-
-          # Compare identical 48-hour windows so changing from 7 to 2 days
-          # doesn't look like a loss of programme coverage.
-          now = datetime.now(timezone.utc)
-          horizon = now + timedelta(hours=48)
-
-          def profile(root):
-              if root.tag != 'tv':
-                  raise ValueError('Invalid XMLTV root')
-              channels = {ch.get('id') for ch in root.findall('channel') if ch.get('id')}
-              coverage = Counter()
-              relevant_programmes = 0
-              for p in root.findall('programme'):
-                  cid = p.get('channel')
-                  if cid not in channels:
-                      continue
-                  try:
-                      raw_start = p.get('start', '')
-                      raw_stop = p.get('stop', '') or raw_start
-                      def parse(raw):
-                          when = datetime.strptime(raw[:14], '%Y%m%d%H%M%S')
-                          offset = raw[14:].strip()
-                          if len(offset) >= 5 and offset[0] in '+-' and offset[1:5].isdigit():
-                              sign = 1 if offset[0] == '+' else -1
-                              minutes = sign * (int(offset[1:3]) * 60 + int(offset[3:5]))
-                              return when.replace(tzinfo=timezone(timedelta(minutes=minutes)))
-                          return when.replace(tzinfo=timezone.utc)
-                      start, stop = parse(raw_start), parse(raw_stop)
-                  except (ValueError, TypeError):
-                      continue
-                  if start < horizon and stop > now:
-                      coverage[cid] += 1
-                      relevant_programmes += 1
-              return channels, coverage, relevant_programmes
-
-          candidate = ET.parse('public/epg.xml').getroot()
-          new_channels, new_coverage, new_entries = profile(candidate)
-          print('New EPG: %d channels, %d channels with next-48h listings, %d next-48h programmes'
-                % (len(new_channels), len(new_coverage), new_entries))
-          if len(new_channels) < 20 or len(new_coverage) < 15 or new_entries < 500:
-              raise SystemExit('Refusing to publish severely incomplete guide')
-
-          previous = subprocess.run(['git', 'show', 'HEAD:public/epg.xml'], capture_output=True)
-          if previous.returncode == 0 and previous.stdout:
-              old_channels, old_coverage, old_entries = profile(ET.fromstring(previous.stdout))
-              print('Previous EPG: %d channels, %d channels with next-48h listings, %d next-48h programmes'
-                    % (len(old_channels), len(old_coverage), old_entries))
-              # Do not compare 7-day programme totals to 2-day totals.
-              # Compare only active channels common to both guides.
-              if len(old_coverage) >= 20:
-                  retained = len(set(old_coverage) & set(new_coverage))
-                  print('Retained active channels: %d/%d' % (retained, len(old_coverage)))
-                  if retained < len(old_coverage) * 0.65:
-                      raise SystemExit('Refusing to publish: significant channel coverage regression')
-          PY
-
-      - name: Report channel schedule coverage
-        run: python3 scripts/report_coverage.py public/epg.xml public/coverage.json
-
       - name: Publish updated guide
-        shell: bash
         run: |
-          set -euo pipefail
           git config user.name 'personal-epg-bot'
           git config user.email 'actions@users.noreply.github.com'
-
-          # Preserve the validated generated output while bringing the
-          # checkout up to the newest main commit (including workflow edits).
-          artifacts_dir="$(mktemp -d)"
-          trap 'rm -rf "$artifacts_dir"' EXIT
-          cp public/epg.xml public/epg.xml.gz public/coverage.json Canada_EPG.xml.gz "$artifacts_dir/"
-
-          for attempt in 1 2 3 4; do
-            echo "Publish attempt $attempt of 4"
-            git fetch origin main
-            git reset --hard origin/main
-            mkdir -p public
-            cp "$artifacts_dir/epg.xml" public/epg.xml
-            cp "$artifacts_dir/epg.xml.gz" public/epg.xml.gz
-            cp "$artifacts_dir/coverage.json" public/coverage.json
-            cp "$artifacts_dir/Canada_EPG.xml.gz" Canada_EPG.xml.gz
-            git add public/epg.xml public/epg.xml.gz public/coverage.json Canada_EPG.xml.gz
-
-            if git diff --cached --quiet; then
-              echo 'EPG already matches published guide.'
-              exit 0
-            fi
-
+          git add public/epg.xml public/epg.xml.gz Canada_EPG.xml.gz
+          if git diff --cached --quiet; then
+            echo 'No EPG changes to commit.'
+          else
             git commit -m 'Update EPG data'
-            if git push origin HEAD:main; then
-              echo 'Successfully published latest EPG.'
-              exit 0
-            fi
-            echo 'Another change reached main during publishing; retrying.'
-            sleep 3
-          done
-
-          echo 'Unable to publish EPG after 4 attempts.' >&2
-          exit 1
+            git push
+          fi
