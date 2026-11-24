@@ -76,7 +76,18 @@
         "YTV",
         "Treehouse",
         "Family Channel",
-        "MovieTime"
+        "MovieTime",
+        "TSN1",
+        "TSN2",
+        "TSN3",
+        "TSN4",
+        "TSN5",
+        "Sportsnet East",
+        "Sportsnet West",
+        "Sportsnet Ontario",
+        "Sportsnet Pacific",
+        "Sportsnet 360",
+        "Sportsnet One"
       ]
     },
     {
@@ -146,7 +157,18 @@
         "Sky Witness",
         "Sky Comedy",
         "Sky Crime",
-        "Sky Arts"
+        "Sky Arts",
+        "TSN1",
+        "TSN2",
+        "TSN3",
+        "TSN4",
+        "TSN5",
+        "Sportsnet East",
+        "Sportsnet West",
+        "Sportsnet Ontario",
+        "Sportsnet Pacific",
+        "Sportsnet 360",
+        "Sportsnet One"
       ],
       "max_channels": 140,
       "optional": true
