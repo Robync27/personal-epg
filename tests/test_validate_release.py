@@ -32,6 +32,13 @@ class ReleaseGateTests(unittest.TestCase):
     def test_unchanged_release_passes(self):
         self.assertEqual(validate(self.new, self.old, now=NOW)["status"], "PASS")
 
+
+    def test_stale_baseline_is_allowed_when_candidate_is_current(self):
+        stale = guide(("a", "b")).replace("20261113", "20250101")
+        self.old.write_text(stale, encoding="utf-8")
+        result = validate(self.new, self.old, now=NOW)
+        self.assertEqual(result["status"], "PASS")
+
     def test_removed_channel_id_fails(self):
         self.check(guide(("a",)), "channel ID regression")
 
