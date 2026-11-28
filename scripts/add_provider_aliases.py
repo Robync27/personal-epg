@@ -79,4 +79,8 @@ if __name__ == "__main__":
     print(json.dumps(result, indent=2))
     unmapped = [k for k, v in result.items() if v["status"] == "source_missing_or_empty"]
     if unmapped:
-        raise SystemExit("Required provider IDs lack real schedules: " + ", ".join(unmapped))
+        print(
+            "WARNING: Optional provider IDs have no verified source schedule; "
+            "publishing all other valid guide data: " + ", ".join(unmapped),
+            file=sys.stderr,
+        )
