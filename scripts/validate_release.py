@@ -9,7 +9,7 @@ from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-def inspect(path, now=None):
+def inspect(path, now=None, require_upcoming=True):
     now = now or datetime.now(timezone.utc)
     channels = set()
     names = {}
@@ -53,7 +53,7 @@ def inspect(path, now=None):
     total = sum(programmes.values())
     if missing_title > total // 20:
         raise ValueError("more than 5% of programmes lack titles")
-    if sum(future.values()) == 0:
+    if require_upcoming and sum(future.values()) == 0:
         raise ValueError("no current or upcoming programme entries")
     return {"channels": channels, "names": names, "programmes": programmes,
             "future": future, "programme_count": total,
@@ -61,7 +61,9 @@ def inspect(path, now=None):
 
 def validate(candidate, baseline, gz=None, now=None):
     new = inspect(candidate, now)
-    old = inspect(baseline, now)
+    # A previous release is expected to become stale between scheduled runs.
+    # Validate its structure and channel continuity without requiring live listings.
+    old = inspect(baseline, now, require_upcoming=False)
     removed = old["channels"] - new["channels"]
     if removed:
         raise ValueError("channel ID regression; removed: " + repr(sorted(removed)[:20]))
